@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions">
+
+<ui:composition template="templates/template.xhtml">
+<ui:define name="content">
+
+	<h:form id="form">
+		<p:dataTable id="dataTable" widgetVar="dataTablePacientes" value="#{pacientesBean.list}" var="paciente" paginator="true" rows="10" 
+			 filteredValue="#{pacientesBean.listFilter}" style="margin: 5% 15%;">
+			<f:facet name="header">
+				<h2>Pacientes</h2>
+			</f:facet>
+			<f:facet name="footer">
+				<h:outputText value="Total de pacientes: #{fn:length(pacientesBean.list)}" />
+			</f:facet>
+			<p:column headerText="Nome" filterBy="#{paciente.nome}" sortBy="#{paciente.nome}">
+				<h:outputText value="#{paciente.nome}" />
+			</p:column>
+			<p:column headerText="Prontuário">
+				<h:outputText value="#{paciente.prontuario}" />
+			</p:column>
+			<p:column headerText="Plano de Saúde">
+				<h:outputText value="#{paciente.planoDeSaude}" />
+			</p:column>
+			<p:column headerText="Agendar Exame" style="width: 12%;">
+				<p:commandButton icon="fa fa-fw fa-edit" title="Agendar Exames"	styleClass="butn" oncomplete="PF('dlgTipoExame').show();"
+					update=":formDlg growlPaciente">
+					<f:setPropertyActionListener value="#{paciente}" target="#{pacientesBean.paciente}"/>
+				</p:commandButton>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+
+	<h:form id="formAgendamentos">
+		<p:dataTable id="dataTableAgendamentos" widgetVar="dataAgendamento" value="#{pacientesBean.listAgendamentos}" var="agendamento" paginator="true" rows="10"	
+			  filteredValue="#{pacientesBean.listAgendamentosFilter}" style="margin: 5% 15%;" emptyMessage="Não há agendamentos marcados.">
+			<f:facet name="header">
+				<h2>Agendamentos</h2>
+			</f:facet>
+			<p:column headerText="Nome do Paciente" filterBy="#{agendamento.paciente.nome}" sortBy="#{agendamento.paciente.nome}">
+				<h:outputText value="#{agendamento.paciente.nome}"/>
+			</p:column>
+			<p:column headerText="Tipo de Exame">
+				<h:outputText value="#{agendamento.paciente.tipoExame}"/>
+			</p:column>
+			<p:column headerText="Data e Horário">
+				<h:outputText value="#{agendamento.dataExame}">
+					<f:convertDateTime pattern="dd/MM/yyyy HH:mm" timeZone="America/Sao_Paulo"/>
+				</h:outputText>
+			</p:column>
+			<p:column headerText="Unidade">
+				<h:outputText value="#{agendamento.unidade}"/>
+			</p:column>
+			<p:column headerText="Status">
+				<h:outputText value="#{agendamento.status}"/>
+			</p:column>
+			<p:column headerText="Realizar Exame" style="width: 12%;">
+				<p:commandButton icon="fa fa-fw fa-user-md" title="Realizar Exame" actionListener="#{userBean.putId(agendamento.id)}" oncomplete="PF('dlgLogin').show();"/>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+
+	<p:dialog widgetVar="dlgTipoExame" modal="true" appendTo="@(body)" draggable="false" closable="false" resizable="true" header="Marcação de exames" 
+			showEffect="explode" hideEffect="bounce"  height="270">
+		<h:form id="formDlg">
+			<h:outputLabel id="nomePaciente" value="#{pacientesBean.paciente.nome}, qual tipo de exame irá fazer?" />
+				
+			<p:panelGrid id="pnlTipoExame" columns="2" style="margin-top: 5%;">
+				<p:outputLabel value="Tipo do Exame:" />
+				<p:selectOneMenu value="#{pacientesBean.paciente.tipoExame}" filter="true" required="true" requiredMessage="Selecione o tipo de exame">
+					<f:selectItem itemLabel="" itemValue=""/>
+					<f:selectItems value="#{pacientesBean.listExames}" var="exame" itemLabel="#{exame}"  itemValue="#{exame}"/>
+				</p:selectOneMenu>
+			
+				<p:outputLabel value="Unidade:" />
+				<p:selectOneMenu  value="#{pacientesBean.agendamento.unidade}" filter="true" required="true" requiredMessage="Selecione a unidade">
+					<f:selectItem itemLabel="" itemValue=""/>
+					<f:selectItems value="#{pacientesBean.listUnidades}" var="unidade" itemLabel="#{unidade}"  itemValue="#{unidade}"/>
+				</p:selectOneMenu>
+			
+				<p:outputLabel for="datetime" value="Data:" />
+        		<p:calendar id="datetime" value="#{pacientesBean.agendamento.dataExame}" timeZone="America/Sao_Paulo" pattern="MM/dd/yyyy HH:mm:ss" 
+        					required="true" requiredMessage="Selecione data e horário"/>
+			</p:panelGrid>
+			
+			<h:panelGrid columns="2">
+				<p:commandButton value="Agendar" actionListener="#{pacientesBean.save}" style="margin: 10% 0% 0% 25%;" 
+					styleClass="butn" update="formAgendamentos:dataTableAgendamentos :growlPaciente" 
+					oncomplete="verify(xhr, status, args, 'dlgTipoExame', 'dataTablePacientes');" />
+				<p:commandButton value="Cancel" actionListener="#{pacientesBean.clearFields}" oncomplete="PF('dlgTipoExame').hide();" process="@this"
+					styleClass="butn"  style="margin: 12% 0% 0% 38%;"/>
+			</h:panelGrid> 
+		</h:form>
+	</p:dialog>
+	
+	
+	<p:dialog widgetVar="dlgLogin" resizable="false" modal="true" appendTo="@(body)" header="Acesso restrito à Colaboradores"
+			showEffect="explode" hideEffect="bounce" height="200">
+			<h:form id="formLogin">
+				<p:panelGrid columns="2" cellpadding="5">
+					<h:outputText value="Login: "/>
+					<p:inputText id="login" value="#{userBean.login}" required="true" requiredMessage="Login é obrigatório!"/>
+					<h:outputText value="Senha: "/>
+					<p:password value="#{userBean.senha}" feedback="true" weakLabel="Senha fraca!" goodLabel="Senha média!" strongLabel="Senha forte!"
+								required="true" requiredMessage="Senha é obrigatória!"/>
+				</p:panelGrid>
+				<h:panelGrid style="margin: 10% 0% 0% 30% ;">
+					<p:commandButton value="Entrar" action="#{userBean.logar}" update="growlPaciente"
+					oncomplete="verifyLogin(xhr, status, args, 'dlgLogin');" />
+				</h:panelGrid>
+			</h:form>
+	</p:dialog>
+	
+</ui:define>
+</ui:composition>
+</html>

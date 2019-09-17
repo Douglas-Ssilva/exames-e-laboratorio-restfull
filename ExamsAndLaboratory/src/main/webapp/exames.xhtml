@@ -1,0 +1,102 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui" 
+	template="templates/template.xhtml">
+
+	<ui:define name="content">
+	
+	<f:metadata>
+		<f:viewParam name="idAgendamento" value="#{exameBean.idAgendamento}"/>
+		<f:viewAction action="#{exameBean.init}" onPostback="false"/>
+	</f:metadata>
+	
+	
+		<div style="margin-top: 3%;">
+		<h:form id="formExame">
+	      	<p:fieldset legend="Exame de: #{exameBean.agendamento.paciente.tipoExame}" title="Exame" style="margin: 5% 15%;">
+      			<p:focus context="panelExame">
+		      		<p:panelGrid id="panelExame" columns="4">
+	      				<p:outputLabel value="Nome Paciente: "/>
+	      				<p:inputText value="#{exameBean.exame.paciente.nome}" readonly="true">
+	      					<f:validateBean/>
+	      				</p:inputText>
+	      				<p:outputLabel value="Tipo Exame: "/>
+	      				<p:inputText value="#{exameBean.exame.paciente.tipoExame}" readonly="true">
+	      					<f:validateBean/>
+	      				</p:inputText>
+	      				<p:outputLabel value="Unidade: "/>
+	      				<p:inputText value="#{exameBean.exame.unidadeLaboratorio}" readonly="true">
+	      					<f:validateBean/>
+	      				</p:inputText>
+	      				<p:outputLabel value="Nome Médico: "/>
+	      				<p:inputText id="nomeMedico" value="#{exameBean.exame.nomeMedico}">
+	      					<f:validateBean/>
+	      				</p:inputText>
+	      				<p:outputLabel value="Tipo Sanguíneo: "/>
+	      				<p:selectOneMenu value="#{exameBean.exame.tipoSangue}" filter="true">
+	      					<f:selectItem itemValue="" itemLabel=""/>
+	      					<f:selectItems value="#{exameBean.listTiposSangue}" var="sangue" itemValue="#{sangue}" itemLabel="#{sangue}"/>
+	      					<f:validateBean/>
+	      				</p:selectOneMenu>
+	      				<p:outputLabel value="Pressão: "/>
+	      				<p:inputMask mask="99.9" value="#{exameBean.exame.pressao}">
+	      					<f:validateBean/>
+	      				</p:inputMask>
+	      				<p:outputLabel value="Colesterol: "/>
+	      				<p:inputText value="#{exameBean.exame.colesterol}" maxlength="3">
+	      					<f:validateBean/>
+	      				</p:inputText>
+	      				<p:outputLabel value="Glicose: "/>
+	      				<p:inputText value="#{exameBean.exame.glicose}" maxlength="3">
+	      					<f:validateBean/>
+	      				</p:inputText>
+	      				
+		      		</p:panelGrid>
+		      		<h:panelGrid columns="4">
+			      		<p:commandButton value="Agendamentos" icon="fa fa-fw fa-reply" process="@this" action="pacientes?faces-redirect=true"/>
+			      		<p:commandButton value="Save" icon="fa fa-fw fa-save" actionListener="#{exameBean.save}" 
+			      			update=":formDataTableExames:dataTableExames growlPaciente formExame"/>
+		      		</h:panelGrid>
+      			</p:focus>
+	      	</p:fieldset>
+		</h:form>
+		</div>
+		
+		<h:form id="formDataTableExames">
+			<p:dataTable id="dataTableExames" value="#{exameBean.listExames}" var="exame"  filteredValue="#{exameBean.listExamesFiltered}" widgetVar="wDataExames" 
+					paginator="true" rows="5" emptyMessage="Não há exames cadastrados!"	style="margin: 5% 15%;">
+				<f:facet name="header"><h2>Exames Realizados</h2></f:facet>
+				<f:facet name="header">
+		            <div style="float:center; padding-top: 5px;">
+		                <h:commandLink>
+		                    <p:graphicImage library="img" name="pdf.png" width="24"/>
+		                    <p:dataExporter type="pdf" target="dataTableExames" fileName="exames" encoding="ISO-8859-1"/>
+		                </h:commandLink>
+		            </div>
+        		</f:facet>
+				<p:column headerText="Nome Paciente" filterBy="#{exame.paciente.nome}" sortBy="#{exame.paciente.nome}">
+					<h:outputText value="#{exame.paciente.nome}"/>
+				</p:column>
+				<p:column headerText="Nome Médico">
+					<h:outputText value="#{exame.nomeMedico}"/>
+				</p:column>
+				<p:column headerText="Tipo Exame">
+					<h:outputText value="#{exame.paciente.tipoExame}"/>
+				</p:column>
+				<p:column headerText="Pressão">
+					<h:outputText value="#{exame.pressao}"/>
+				</p:column>
+				<p:column headerText="Tipo Sanguíneo">
+					<h:outputText value="#{exame.tipoSangue}"/>
+				</p:column>
+				<p:column headerText="Colesterol">
+					<h:outputText value="#{exame.colesterol}"/>
+				</p:column>
+			</p:dataTable>
+		</h:form>
+		
+     </ui:define>
+
+</ui:composition>

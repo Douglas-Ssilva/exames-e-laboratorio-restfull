@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions">
+	
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Laboratório</title>
+	<h:outputStylesheet library="css" name="style_pacientes.css" />
+	<h:outputStylesheet library="css" name="style_template.css" />
+	<h:outputStylesheet library="css" name="app.css" />
+	<h:outputScript library="js" name="script.js"/>
+</h:head>
+
+<h:body>
+	<p:growl id="growlPaciente" life="3000"/>
+	
+	<div class="Container">
+		<header role="banner"> <a href="pacientes.xhtml"><h2
+				class="LogoSite" role="logo">Digimagem</h2></a>
+		<div class="Acessibilidade">
+			<nav>
+			<ul>
+				<li><a href="#menuPrincipal">Ir para o menu principal</a></li>
+				<li><a href="#busca">Ir para busca</a></li>
+				<li><a href="#mainContent">Ir para o conteúdo principal</a></li>
+			</ul>
+			</nav>
+		</div>
+
+		<div id="controleMostraPagina_ctl00_ctrlMenuApoio" class="MenuApoio" codigoTipoConteudo="3" nomeTipoConteudo="Menu" codigoReferencia="2"
+			nomeReferencia="Associação">
+			<nav id="menuApoioEsquerda">
+			<ul>
+				<li><a class="IconeTelefone" href="/br/p/75/fala-conosco---capa.aspx" accesskey="1"	title="Fale Conosco" target="_self"><span class="TextoLink">
+					Fale Conosco</span></a></li>
+				<li><a class="IconeMaleta"	href="https://www.vagas.com.br/grupohermespardini" accesskey="2" title="Trabalhe Conosco" target="_blank"><span
+						class="TextoLink">Trabalhe Conosco</span></a></li>
+			</ul>
+			</nav>
+		</div>
+
+		<div id="controleMostraPagina_ctl00_ctrlMenuInstitucional" class="MenuInstitucional" codigoTipoConteudo="3"	nomeTipoConteudo="Menu" codigoReferencia="2"
+			nomeReferencia="Associação">
+			<nav id="menuInstitucional">
+			<ul>
+				<li><a class="" href="/br/p/80/a-empresa----capa.aspx"	accesskey="1" title="A Empresa" target="_self">A Empresa</a></li>
+				<li><a class="" href="/br/p/58/servicos---capa.aspx"	accesskey="2" title="Serviços" target="_self">Serviços</a></li>
+				<li><a class="" href="/br/p/60/unidades---capa.aspx"	accesskey="3" title="Unidades" target="_self">Unidades</a></li>
+				<li><a class="" href="/br/p/144/sala-de-imprensa.aspx"	accesskey="4" title="Sala de Imprensa" target="_self">Sala de Imprensa</a></li>
+			</ul>
+			</nav>
+		</div>
+		</header>
+
+		<div id="controleMostraPagina_ctl00_ctrlMenuPrincipal"	class="MenuPrincipal" codigoTipoConteudo="3" nomeTipoConteudo="Menu" codigoReferencia="2" nomeReferencia="Associação">
+			<nav id="menuPrincipal" role="main">
+			<ul>
+				<li id="analises_clinicas"><a class="ItemMenu"	href="/br/p/94/analises-clinicas.aspx" accesskey="1" title="Análises Clínicas"><span class="TextoLink">Análises
+							Clínicas</span></a></li>
+				<li id="diagnostico_por_imagem"><a class="ItemMenu"	href="/br/p/96/diagnostico-por-imagem.aspx" accesskey="2" title="Diagnóstico Por Imagem"><span class="TextoLink">Diagnóstico
+							Por Imagem</span></a></li>
+				<li id="vacinas"><a class="ItemMenu" href="/br/p/98/vacinas.aspx" accesskey="3" title="Vacinas"><span class="TextoLink">Vacinas</span></a></li>
+				<li id="apoio_a_parceiros"><a class="ItemMenu" href="http://www3.hermespardini.com.br/pagina/142/laboratorios.aspx"	accesskey="4" title="Apoio a Parceiros"><span class="TextoLink">Apoio
+							a Parceiros</span></a></li>
+				<li id="profissionais_da_saude"><a class="ItemMenu"	href="http://www.portalmedicopardini.com.br/" accesskey="5" title="Profissionais da Saúde"><span class="TextoLink">Profissionais
+							da Saúde</span></a></li>
+			</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div id="controleMostraPagina_ctl00_ctrlMenuSecao"	class="ContainerFull" codigoTipoConteudo="3" nomeTipoConteudo="Menu" codigoReferencia="1" nomeReferencia="Cópia">
+
+		<div class="ContainerFull ToMenuSecao">
+			<div class="Container">
+				<nav id="menuSecao" class="MenuSecao">
+				<ul>
+					<li class=""><a	href="page_inicial.xhtml" accesskey="1" title="Página Inicial" target="_self">Página Inicial</a></li>
+					<li class=""><a
+						href="pacientes.xhtml"	accesskey="2" title="Pacientes e Agendamentos">Pacientes</a></li>
+					<li class=""><a href="exames.xhtml" accesskey="3" title="Resultado de Exames">Resultado de Exames</a></li>
+					<li class=""><a href="pacientes.xhtml" accesskey="5"	title="Agendamento Online">Agendamentos</a></li>
+				</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div>
+		<ui:insert name="content"/>
+	</div>
+
+	<p:separator id="sepatator" style="margin: 0% 0% 0% 0%;" />
+	<p:separator id="sepatator2" style="margin: 0% 0% 0% 0%;" />
+	<div class="ContainerFull ToFooter">
+		<div class="Container">
+			<footer>
+			<div class="ToLogo">
+				<a href="/"><h2 class="LogoSite" role="logo">Digimagem</h2></a>
+			</div>
+			<div id="controleMostraPagina_ctl00_ctrlContatosRodape"	class="ContatosRodape" codigoTipoConteudo="1"
+				nomeTipoConteudo="Conteúdo Livre" codigoReferencia="2"	nomeReferencia="Associação">
+				<div style="max-width: 22%;" class="ContatoRodape">
+					<h3 style="margin-top: 18px;">	Central de Relacionamento com o Cliente<br /> </h3>
+					<span class="IconeTelefone"><span style="font-size: 18px;"	class="TextoLink">(11) 2799-9311</span><br />
+					<span style="font-size: 15px; padding-left: 20%;" class="TextoLink">VOZ</span></span><br />
+					<p style="position: relative; bottom: 16px; margin-bottom: 0px;" class="HoraAtende">
+						Seg a Sex, de 6h30 às 21h <br />Sáb, de 6h30 às 20h<br />Dom, de 7h às 13h<br />Feriados - 6h30 às 18h
+					</p>
+					<span style="margin-top: -5px;" class="IconeWhatsapp"><span	style="font-size: 18px;" class="TextoLink">(11) 2799-9311</span><br />
+					<span style="font-size: 15px; padding-left: 10%; margin-top: -3px;"	class="TextoLink">Whatsapp</span></span><br />
+					<p style="position: relative; bottom: 5px;" class="HoraAtende">
+						Seg a Sex, de 8h às 19h <br />Sáb de 7h às 13h<br />Feriados -	8h às 14h </p>
+				</div>
+				<div class="LinhaSeparaBranca"></div>
+				<div style="max-width: 19%;" class="ContatoRodape">
+					<h3 style="margin-top: 18px;">	Atendimento Domiciliar<br />para Análises Clínicas e Vacinas<br />	</h3>
+					<span style="font-size: 18px;" class="TextoLink"><span	class="IconeTelefone"><span style="font-size: 18px;"
+							class="TextoLink">(11) 2799-9311</span></span></span>
+					<p class="HoraAtende">	Segunda a Sexta, de 7h às 17h <br />Sábados, de 7h às 11h <br /> </p>
+				</div>
+				<div class="LinhaSeparaBranca"></div>
+				<div style="max-width: 19%;" class="ContatoRodape">
+					<h3 style="margin-top: 18px;">Central de Apoio a Parceiros:</h3>
+					<span style="font-size: 18px;" class="TextoLink"><a	style="color: rgb(229, 72, 46); font-weight: bold;"
+						href="https://www.mypardini.com.br/">www.mypardini.com.br</a></span>
+				</div>
+			</div>
+			</footer>
+		</div>
+	</div>
+
+</h:body>
+</html>

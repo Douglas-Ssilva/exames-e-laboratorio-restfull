@@ -1,0 +1,5396 @@
+@charset "ISO-8859-1";
+
+/*!Documento app.SCSS;
+Autor: Ian Luca - ian.naph@gmail.com || ian.luca [at] bhtec.com.br;
+Projeto: Hermes Pardini - Digimagem;
+Data: Abril/2014;*/
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+body {
+    margin: 0
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block
+}
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline
+}
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+[hidden],
+template {
+    display: none
+}
+a {
+    background: transparent
+}
+a:active,
+a:hover {
+    outline: 0
+}
+abbr[title] {
+    border-bottom: 1px dotted
+}
+b,
+strong {
+    font-weight: bold
+}
+dfn {
+    font-style: italic
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+mark {
+    background: #ff0;
+    color: #000
+}
+small {
+    font-size: 80%
+}
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+sup {
+    top: -0.5em
+}
+sub {
+    bottom: -0.25em
+}
+img {
+    border: 0
+}
+svg:not(:root) {
+    overflow: hidden
+}
+figure {
+    margin: 1em 40px
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+pre {
+    overflow: auto
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+button {
+    overflow: visible
+}
+button,
+select {
+    text-transform: none
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+input {
+    line-height: normal
+}
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto
+}
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em
+}
+legend {
+    border: 0;
+    padding: 0
+}
+textarea {
+    overflow: auto
+}
+optgroup {
+    font-weight: bold
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+td,
+th {
+    padding: 0
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+html {
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: transparent
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+    background-color: #fff
+}
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit
+}
+a {
+    color: #428bca;
+    text-decoration: none
+}
+a:hover,
+a:focus {
+    color: #2a6496;
+    text-decoration: underline
+}
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+figure {
+    margin: 0
+}
+img {
+    vertical-align: middle
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+.img-rounded {
+    border-radius: 6px
+}
+.img-thumbnail {
+    padding: 4px;
+    line-height: 1.42857;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto
+}
+.img-circle {
+    border-radius: 50%
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+.container:before,
+.container:after {
+    content: " ";
+    display: table
+}
+.container:after {
+    clear: both
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px
+    }
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px
+}
+.container-fluid:before,
+.container-fluid:after {
+    content: " ";
+    display: table
+}
+.container-fluid:after {
+    clear: both
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px
+}
+.row:before,
+.row:after {
+    content: " ";
+    display: table
+}
+.row:after {
+    clear: both
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+.col-xs-1,
+.col-xs-2,
+.col-xs-3,
+.col-xs-4,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7,
+.col-xs-8,
+.col-xs-9,
+.col-xs-10,
+.col-xs-11,
+.col-xs-12 {
+    float: left
+}
+.col-xs-1 {
+    width: 8.33333%
+}
+.col-xs-2 {
+    width: 16.66667%
+}
+.col-xs-3 {
+    width: 25%
+}
+.col-xs-4 {
+    width: 33.33333%
+}
+.col-xs-5 {
+    width: 41.66667%
+}
+.col-xs-6 {
+    width: 50%
+}
+.col-xs-7 {
+    width: 58.33333%
+}
+.col-xs-8 {
+    width: 66.66667%
+}
+.col-xs-9 {
+    width: 75%
+}
+.col-xs-10 {
+    width: 83.33333%
+}
+.col-xs-11 {
+    width: 91.66667%
+}
+.col-xs-12 {
+    width: 100%
+}
+.col-xs-pull-0 {
+    right: 0%
+}
+.col-xs-pull-1 {
+    right: 8.33333%
+}
+.col-xs-pull-2 {
+    right: 16.66667%
+}
+.col-xs-pull-3 {
+    right: 25%
+}
+.col-xs-pull-4 {
+    right: 33.33333%
+}
+.col-xs-pull-5 {
+    right: 41.66667%
+}
+.col-xs-pull-6 {
+    right: 50%
+}
+.col-xs-pull-7 {
+    right: 58.33333%
+}
+.col-xs-pull-8 {
+    right: 66.66667%
+}
+.col-xs-pull-9 {
+    right: 75%
+}
+.col-xs-pull-10 {
+    right: 83.33333%
+}
+.col-xs-pull-11 {
+    right: 91.66667%
+}
+.col-xs-pull-12 {
+    right: 100%
+}
+.col-xs-push-0 {
+    left: 0%
+}
+.col-xs-push-1 {
+    left: 8.33333%
+}
+.col-xs-push-2 {
+    left: 16.66667%
+}
+.col-xs-push-3 {
+    left: 25%
+}
+.col-xs-push-4 {
+    left: 33.33333%
+}
+.col-xs-push-5 {
+    left: 41.66667%
+}
+.col-xs-push-6 {
+    left: 50%
+}
+.col-xs-push-7 {
+    left: 58.33333%
+}
+.col-xs-push-8 {
+    left: 66.66667%
+}
+.col-xs-push-9 {
+    left: 75%
+}
+.col-xs-push-10 {
+    left: 83.33333%
+}
+.col-xs-push-11 {
+    left: 91.66667%
+}
+.col-xs-push-12 {
+    left: 100%
+}
+.col-xs-offset-0 {
+    margin-left: 0%
+}
+.col-xs-offset-1 {
+    margin-left: 8.33333%
+}
+.col-xs-offset-2 {
+    margin-left: 16.66667%
+}
+.col-xs-offset-3 {
+    margin-left: 25%
+}
+.col-xs-offset-4 {
+    margin-left: 33.33333%
+}
+.col-xs-offset-5 {
+    margin-left: 41.66667%
+}
+.col-xs-offset-6 {
+    margin-left: 50%
+}
+.col-xs-offset-7 {
+    margin-left: 58.33333%
+}
+.col-xs-offset-8 {
+    margin-left: 66.66667%
+}
+.col-xs-offset-9 {
+    margin-left: 75%
+}
+.col-xs-offset-10 {
+    margin-left: 83.33333%
+}
+.col-xs-offset-11 {
+    margin-left: 91.66667%
+}
+.col-xs-offset-12 {
+    margin-left: 100%
+}
+@media (min-width: 768px) {
+    .col-sm-1,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12 {
+        float: left
+    }
+    .col-sm-1 {
+        width: 8.33333%
+    }
+    .col-sm-2 {
+        width: 16.66667%
+    }
+    .col-sm-3 {
+        width: 25%
+    }
+    .col-sm-4 {
+        width: 33.33333%
+    }
+    .col-sm-5 {
+        width: 41.66667%
+    }
+    .col-sm-6 {
+        width: 50%
+    }
+    .col-sm-7 {
+        width: 58.33333%
+    }
+    .col-sm-8 {
+        width: 66.66667%
+    }
+    .col-sm-9 {
+        width: 75%
+    }
+    .col-sm-10 {
+        width: 83.33333%
+    }
+    .col-sm-11 {
+        width: 91.66667%
+    }
+    .col-sm-12 {
+        width: 100%
+    }
+    .col-sm-pull-0 {
+        right: 0%
+    }
+    .col-sm-pull-1 {
+        right: 8.33333%
+    }
+    .col-sm-pull-2 {
+        right: 16.66667%
+    }
+    .col-sm-pull-3 {
+        right: 25%
+    }
+    .col-sm-pull-4 {
+        right: 33.33333%
+    }
+    .col-sm-pull-5 {
+        right: 41.66667%
+    }
+    .col-sm-pull-6 {
+        right: 50%
+    }
+    .col-sm-pull-7 {
+        right: 58.33333%
+    }
+    .col-sm-pull-8 {
+        right: 66.66667%
+    }
+    .col-sm-pull-9 {
+        right: 75%
+    }
+    .col-sm-pull-10 {
+        right: 83.33333%
+    }
+    .col-sm-pull-11 {
+        right: 91.66667%
+    }
+    .col-sm-pull-12 {
+        right: 100%
+    }
+    .col-sm-push-0 {
+        left: 0%
+    }
+    .col-sm-push-1 {
+        left: 8.33333%
+    }
+    .col-sm-push-2 {
+        left: 16.66667%
+    }
+    .col-sm-push-3 {
+        left: 25%
+    }
+    .col-sm-push-4 {
+        left: 33.33333%
+    }
+    .col-sm-push-5 {
+        left: 41.66667%
+    }
+    .col-sm-push-6 {
+        left: 50%
+    }
+    .col-sm-push-7 {
+        left: 58.33333%
+    }
+    .col-sm-push-8 {
+        left: 66.66667%
+    }
+    .col-sm-push-9 {
+        left: 75%
+    }
+    .col-sm-push-10 {
+        left: 83.33333%
+    }
+    .col-sm-push-11 {
+        left: 91.66667%
+    }
+    .col-sm-push-12 {
+        left: 100%
+    }
+    .col-sm-offset-0 {
+        margin-left: 0%
+    }
+    .col-sm-offset-1 {
+        margin-left: 8.33333%
+    }
+    .col-sm-offset-2 {
+        margin-left: 16.66667%
+    }
+    .col-sm-offset-3 {
+        margin-left: 25%
+    }
+    .col-sm-offset-4 {
+        margin-left: 33.33333%
+    }
+    .col-sm-offset-5 {
+        margin-left: 41.66667%
+    }
+    .col-sm-offset-6 {
+        margin-left: 50%
+    }
+    .col-sm-offset-7 {
+        margin-left: 58.33333%
+    }
+    .col-sm-offset-8 {
+        margin-left: 66.66667%
+    }
+    .col-sm-offset-9 {
+        margin-left: 75%
+    }
+    .col-sm-offset-10 {
+        margin-left: 83.33333%
+    }
+    .col-sm-offset-11 {
+        margin-left: 91.66667%
+    }
+    .col-sm-offset-12 {
+        margin-left: 100%
+    }
+}
+@media (min-width: 992px) {
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+        float: left
+    }
+    .col-md-1 {
+        width: 8.33333%
+    }
+    .col-md-2 {
+        width: 16.66667%
+    }
+    .col-md-3 {
+        width: 25%
+    }
+    .col-md-4 {
+        width: 33.33333%
+    }
+    .col-md-5 {
+        width: 41.66667%
+    }
+    .col-md-6 {
+        width: 50%
+    }
+    .col-md-7 {
+        width: 58.33333%
+    }
+    .col-md-8 {
+        width: 66.66667%
+    }
+    .col-md-9 {
+        width: 75%
+    }
+    .col-md-10 {
+        width: 83.33333%
+    }
+    .col-md-11 {
+        width: 91.66667%
+    }
+    .col-md-12 {
+        width: 100%
+    }
+    .col-md-pull-0 {
+        right: 0%
+    }
+    .col-md-pull-1 {
+        right: 8.33333%
+    }
+    .col-md-pull-2 {
+        right: 16.66667%
+    }
+    .col-md-pull-3 {
+        right: 25%
+    }
+    .col-md-pull-4 {
+        right: 33.33333%
+    }
+    .col-md-pull-5 {
+        right: 41.66667%
+    }
+    .col-md-pull-6 {
+        right: 50%
+    }
+    .col-md-pull-7 {
+        right: 58.33333%
+    }
+    .col-md-pull-8 {
+        right: 66.66667%
+    }
+    .col-md-pull-9 {
+        right: 75%
+    }
+    .col-md-pull-10 {
+        right: 83.33333%
+    }
+    .col-md-pull-11 {
+        right: 91.66667%
+    }
+    .col-md-pull-12 {
+        right: 100%
+    }
+    .col-md-push-0 {
+        left: 0%
+    }
+    .col-md-push-1 {
+        left: 8.33333%
+    }
+    .col-md-push-2 {
+        left: 16.66667%
+    }
+    .col-md-push-3 {
+        left: 25%
+    }
+    .col-md-push-4 {
+        left: 33.33333%
+    }
+    .col-md-push-5 {
+        left: 41.66667%
+    }
+    .col-md-push-6 {
+        left: 50%
+    }
+    .col-md-push-7 {
+        left: 58.33333%
+    }
+    .col-md-push-8 {
+        left: 66.66667%
+    }
+    .col-md-push-9 {
+        left: 75%
+    }
+    .col-md-push-10 {
+        left: 83.33333%
+    }
+    .col-md-push-11 {
+        left: 91.66667%
+    }
+    .col-md-push-12 {
+        left: 100%
+    }
+    .col-md-offset-0 {
+        margin-left: 0%
+    }
+    .col-md-offset-1 {
+        margin-left: 8.33333%
+    }
+    .col-md-offset-2 {
+        margin-left: 16.66667%
+    }
+    .col-md-offset-3 {
+        margin-left: 25%
+    }
+    .col-md-offset-4 {
+        margin-left: 33.33333%
+    }
+    .col-md-offset-5 {
+        margin-left: 41.66667%
+    }
+    .col-md-offset-6 {
+        margin-left: 50%
+    }
+    .col-md-offset-7 {
+        margin-left: 58.33333%
+    }
+    .col-md-offset-8 {
+        margin-left: 66.66667%
+    }
+    .col-md-offset-9 {
+        margin-left: 75%
+    }
+    .col-md-offset-10 {
+        margin-left: 83.33333%
+    }
+    .col-md-offset-11 {
+        margin-left: 91.66667%
+    }
+    .col-md-offset-12 {
+        margin-left: 100%
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-1,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12 {
+        float: left
+    }
+    .col-lg-1 {
+        width: 8.33333%
+    }
+    .col-lg-2 {
+        width: 16.66667%
+    }
+    .col-lg-3 {
+        width: 25%
+    }
+    .col-lg-4 {
+        width: 33.33333%
+    }
+    .col-lg-5 {
+        width: 41.66667%
+    }
+    .col-lg-6 {
+        width: 50%
+    }
+    .col-lg-7 {
+        width: 58.33333%
+    }
+    .col-lg-8 {
+        width: 66.66667%
+    }
+    .col-lg-9 {
+        width: 75%
+    }
+    .col-lg-10 {
+        width: 83.33333%
+    }
+    .col-lg-11 {
+        width: 91.66667%
+    }
+    .col-lg-12 {
+        width: 100%
+    }
+    .col-lg-pull-0 {
+        right: 0%
+    }
+    .col-lg-pull-1 {
+        right: 8.33333%
+    }
+    .col-lg-pull-2 {
+        right: 16.66667%
+    }
+    .col-lg-pull-3 {
+        right: 25%
+    }
+    .col-lg-pull-4 {
+        right: 33.33333%
+    }
+    .col-lg-pull-5 {
+        right: 41.66667%
+    }
+    .col-lg-pull-6 {
+        right: 50%
+    }
+    .col-lg-pull-7 {
+        right: 58.33333%
+    }
+    .col-lg-pull-8 {
+        right: 66.66667%
+    }
+    .col-lg-pull-9 {
+        right: 75%
+    }
+    .col-lg-pull-10 {
+        right: 83.33333%
+    }
+    .col-lg-pull-11 {
+        right: 91.66667%
+    }
+    .col-lg-pull-12 {
+        right: 100%
+    }
+    .col-lg-push-0 {
+        left: 0%
+    }
+    .col-lg-push-1 {
+        left: 8.33333%
+    }
+    .col-lg-push-2 {
+        left: 16.66667%
+    }
+    .col-lg-push-3 {
+        left: 25%
+    }
+    .col-lg-push-4 {
+        left: 33.33333%
+    }
+    .col-lg-push-5 {
+        left: 41.66667%
+    }
+    .col-lg-push-6 {
+        left: 50%
+    }
+    .col-lg-push-7 {
+        left: 58.33333%
+    }
+    .col-lg-push-8 {
+        left: 66.66667%
+    }
+    .col-lg-push-9 {
+        left: 75%
+    }
+    .col-lg-push-10 {
+        left: 83.33333%
+    }
+    .col-lg-push-11 {
+        left: 91.66667%
+    }
+    .col-lg-push-12 {
+        left: 100%
+    }
+    .col-lg-offset-0 {
+        margin-left: 0%
+    }
+    .col-lg-offset-1 {
+        margin-left: 8.33333%
+    }
+    .col-lg-offset-2 {
+        margin-left: 16.66667%
+    }
+    .col-lg-offset-3 {
+        margin-left: 25%
+    }
+    .col-lg-offset-4 {
+        margin-left: 33.33333%
+    }
+    .col-lg-offset-5 {
+        margin-left: 41.66667%
+    }
+    .col-lg-offset-6 {
+        margin-left: 50%
+    }
+    .col-lg-offset-7 {
+        margin-left: 58.33333%
+    }
+    .col-lg-offset-8 {
+        margin-left: 66.66667%
+    }
+    .col-lg-offset-9 {
+        margin-left: 75%
+    }
+    .col-lg-offset-10 {
+        margin-left: 83.33333%
+    }
+    .col-lg-offset-11 {
+        margin-left: 91.66667%
+    }
+    .col-lg-offset-12 {
+        margin-left: 100%
+    }
+}
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0
+}
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold
+}
+input[type="search"] {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    line-height: normal
+}
+input[type="file"] {
+    display: block
+}
+input[type="range"] {
+    display: block;
+    width: 100%
+}
+select[multiple],
+select[size] {
+    height: auto
+}
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+output {
+    display: block;
+    padding-top: 7px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6)
+}
+.form-control::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+.form-control:-ms-input-placeholder {
+    color: #999
+}
+.form-control::-webkit-input-placeholder {
+    color: #999
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1
+}
+textarea.form-control {
+    height: auto
+}
+input[type="search"] {
+    -webkit-appearance: none
+}
+input[type="date"] {
+    line-height: 34px
+}
+.form-group {
+    margin-bottom: 15px
+}
+.radio,
+.checkbox {
+    display: block;
+    min-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px
+}
+.radio label,
+.checkbox label {
+    display: inline;
+    font-weight: normal;
+    cursor: pointer
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    float: left;
+    margin-left: -20px
+}
+.radio+.radio,
+.checkbox+.checkbox {
+    margin-top: -5px
+}
+.radio-inline,
+.checkbox-inline {
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer
+}
+.radio-inline+.radio-inline,
+.checkbox-inline+.checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px
+}
+input[type="radio"][disabled],
+fieldset[disabled] input[type="radio"],
+input[type="checkbox"][disabled],
+fieldset[disabled] input[type="checkbox"],
+.radio[disabled],
+fieldset[disabled] .radio,
+.radio-inline[disabled],
+fieldset[disabled] .radio-inline,
+.checkbox[disabled],
+fieldset[disabled] .checkbox,
+.checkbox-inline[disabled],
+fieldset[disabled] .checkbox-inline {
+    cursor: not-allowed
+}
+.input-sm {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px
+}
+select.input-sm {
+    height: 30px;
+    line-height: 30px
+}
+textarea.input-sm,
+select[multiple].input-sm {
+    height: auto
+}
+.input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px
+}
+select.input-lg {
+    height: 46px;
+    line-height: 46px
+}
+textarea.input-lg,
+select[multiple].input-lg {
+    height: auto
+}
+.has-feedback {
+    position: relative
+}
+.has-feedback .form-control {
+    padding-right: 42.5px
+}
+.has-feedback .form-control-feedback {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center
+}
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline {
+    color: #3c763d
+}
+.has-success .form-control {
+    border-color: #3c763d;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+.has-success .form-control:focus {
+    border-color: #2b542c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168
+}
+.has-success .input-group-addon {
+    color: #3c763d;
+    border-color: #3c763d;
+    background-color: #dff0d8
+}
+.has-success .form-control-feedback {
+    color: #3c763d
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline {
+    color: #8a6d3b
+}
+.has-warning .form-control {
+    border-color: #8a6d3b;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+.has-warning .form-control:focus {
+    border-color: #66512c;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b
+}
+.has-warning .input-group-addon {
+    color: #8a6d3b;
+    border-color: #8a6d3b;
+    background-color: #fcf8e3
+}
+.has-warning .form-control-feedback {
+    color: #8a6d3b
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline {
+    color: #a94442
+}
+.has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+.has-error .form-control:focus {
+    border-color: #843534;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483
+}
+.has-error .input-group-addon {
+    color: #a94442;
+    border-color: #a94442;
+    background-color: #f2dede
+}
+.has-error .form-control-feedback {
+    color: #a94442
+}
+.form-control-static {
+    margin-bottom: 0
+}
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #737373
+}
+@media (min-width: 768px) {
+    .form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle
+    }
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle
+    }
+    .form-inline .input-group>.form-control {
+        width: 100%
+    }
+    .form-inline .control-label {
+        margin-bottom: 0;
+        vertical-align: middle
+    }
+    .form-inline .radio,
+    .form-inline .checkbox {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        vertical-align: middle
+    }
+    .form-inline .radio input[type="radio"],
+    .form-inline .checkbox input[type="checkbox"] {
+        float: none;
+        margin-left: 0
+    }
+    .form-inline .has-feedback .form-control-feedback {
+        top: 0
+    }
+}
+.form-horizontal .control-label,
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px
+}
+.form-horizontal .radio,
+.form-horizontal .checkbox {
+    min-height: 27px
+}
+.form-horizontal .form-group {
+    margin-left: -15px;
+    margin-right: -15px
+}
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after {
+    content: " ";
+    display: table
+}
+.form-horizontal .form-group:after {
+    clear: both
+}
+.form-horizontal .form-control-static {
+    padding-top: 7px
+}
+@media (min-width: 768px) {
+    .form-horizontal .control-label {
+        text-align: right
+    }
+}
+.form-horizontal .has-feedback .form-control-feedback {
+    top: 0;
+    right: 15px
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px
+}
+.btn:hover,
+.btn:focus {
+    color: #333;
+    text-decoration: none
+}
+.btn:active,
+.btn.active {
+    outline: 0;
+    background-image: none;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad
+}
+.open .btn-default.dropdown-toggle {
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad
+}
+.btn-default:active,
+.btn-default.active {
+    background-image: none
+}
+.open .btn-default.dropdown-toggle {
+    background-image: none
+}
+.btn-default.disabled,
+.btn-default.disabled:hover,
+.btn-default.disabled:focus,
+.btn-default.disabled:active,
+.btn-default.disabled.active,
+.btn-default[disabled],
+.btn-default[disabled]:hover,
+.btn-default[disabled]:focus,
+.btn-default[disabled]:active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-default:hover,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default:active,
+fieldset[disabled] .btn-default.active {
+    background-color: #fff;
+    border-color: #ccc
+}
+.btn-default .badge {
+    color: #fff;
+    background-color: #333
+}
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e
+}
+.open .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e
+}
+.btn-primary:active,
+.btn-primary.active {
+    background-image: none
+}
+.open .btn-primary.dropdown-toggle {
+    background-image: none
+}
+.btn-primary.disabled,
+.btn-primary.disabled:hover,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled],
+.btn-primary[disabled]:hover,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-primary:hover,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #428bca;
+    border-color: #357ebd
+}
+.btn-primary .badge {
+    color: #428bca;
+    background-color: #fff
+}
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active {
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439
+}
+.open .btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439
+}
+.btn-success:active,
+.btn-success.active {
+    background-image: none
+}
+.open .btn-success.dropdown-toggle {
+    background-image: none
+}
+.btn-success.disabled,
+.btn-success.disabled:hover,
+.btn-success.disabled:focus,
+.btn-success.disabled:active,
+.btn-success.disabled.active,
+.btn-success[disabled],
+.btn-success[disabled]:hover,
+.btn-success[disabled]:focus,
+.btn-success[disabled]:active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success,
+fieldset[disabled] .btn-success:hover,
+fieldset[disabled] .btn-success:focus,
+fieldset[disabled] .btn-success:active,
+fieldset[disabled] .btn-success.active {
+    background-color: #5cb85c;
+    border-color: #4cae4c
+}
+.btn-success .badge {
+    color: #5cb85c;
+    background-color: #fff
+}
+.btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active {
+    color: #fff;
+    background-color: #39b3d7;
+    border-color: #269abc
+}
+.open .btn-info.dropdown-toggle {
+    color: #fff;
+    background-color: #39b3d7;
+    border-color: #269abc
+}
+.btn-info:active,
+.btn-info.active {
+    background-image: none
+}
+.open .btn-info.dropdown-toggle {
+    background-image: none
+}
+.btn-info.disabled,
+.btn-info.disabled:hover,
+.btn-info.disabled:focus,
+.btn-info.disabled:active,
+.btn-info.disabled.active,
+.btn-info[disabled],
+.btn-info[disabled]:hover,
+.btn-info[disabled]:focus,
+.btn-info[disabled]:active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info,
+fieldset[disabled] .btn-info:hover,
+fieldset[disabled] .btn-info:focus,
+fieldset[disabled] .btn-info:active,
+fieldset[disabled] .btn-info.active {
+    background-color: #5bc0de;
+    border-color: #46b8da
+}
+.btn-info .badge {
+    color: #5bc0de;
+    background-color: #fff
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active {
+    color: #fff;
+    background-color: #ed9c28;
+    border-color: #d58512
+}
+.open .btn-warning.dropdown-toggle {
+    color: #fff;
+    background-color: #ed9c28;
+    border-color: #d58512
+}
+.btn-warning:active,
+.btn-warning.active {
+    background-image: none
+}
+.open .btn-warning.dropdown-toggle {
+    background-image: none
+}
+.btn-warning.disabled,
+.btn-warning.disabled:hover,
+.btn-warning.disabled:focus,
+.btn-warning.disabled:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled],
+.btn-warning[disabled]:hover,
+.btn-warning[disabled]:focus,
+.btn-warning[disabled]:active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning,
+fieldset[disabled] .btn-warning:hover,
+fieldset[disabled] .btn-warning:focus,
+fieldset[disabled] .btn-warning:active,
+fieldset[disabled] .btn-warning.active {
+    background-color: #f0ad4e;
+    border-color: #eea236
+}
+.btn-warning .badge {
+    color: #f0ad4e;
+    background-color: #fff
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active {
+    color: #fff;
+    background-color: #d2322d;
+    border-color: #ac2925
+}
+.open .btn-danger.dropdown-toggle {
+    color: #fff;
+    background-color: #d2322d;
+    border-color: #ac2925
+}
+.btn-danger:active,
+.btn-danger.active {
+    background-image: none
+}
+.open .btn-danger.dropdown-toggle {
+    background-image: none
+}
+.btn-danger.disabled,
+.btn-danger.disabled:hover,
+.btn-danger.disabled:focus,
+.btn-danger.disabled:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled],
+.btn-danger[disabled]:hover,
+.btn-danger[disabled]:focus,
+.btn-danger[disabled]:active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger,
+fieldset[disabled] .btn-danger:hover,
+fieldset[disabled] .btn-danger:focus,
+fieldset[disabled] .btn-danger:active,
+fieldset[disabled] .btn-danger.active {
+    background-color: #d9534f;
+    border-color: #d43f3a
+}
+.btn-danger .badge {
+    color: #d9534f;
+    background-color: #fff
+}
+.btn-link {
+    color: #428bca;
+    font-weight: normal;
+    cursor: pointer;
+    border-radius: 0
+}
+.btn-link,
+.btn-link:active,
+.btn-link[disabled],
+fieldset[disabled] .btn-link {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+    border-color: transparent
+}
+.btn-link:hover,
+.btn-link:focus {
+    color: #2a6496;
+    text-decoration: underline;
+    background-color: transparent
+}
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus,
+fieldset[disabled] .btn-link:hover,
+fieldset[disabled] .btn-link:focus {
+    color: #999;
+    text-decoration: none
+}
+.btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px
+}
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px
+}
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px
+}
+.btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0
+}
+.btn-block+.btn-block {
+    margin-top: 5px
+}
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+    width: 100%
+}
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none
+}
+.nav:before,
+.nav:after {
+    content: " ";
+    display: table
+}
+.nav:after {
+    clear: both
+}
+.nav>li {
+    position: relative;
+    display: block
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px
+}
+.nav>li>a:hover,
+.nav>li>a:focus {
+    text-decoration: none;
+    background-color: #eee
+}
+.nav>li.disabled>a {
+    color: #999
+}
+.nav>li.disabled>a:hover,
+.nav>li.disabled>a:focus {
+    color: #999;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: not-allowed
+}
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus {
+    background-color: #eee;
+    border-color: #428bca
+}
+.nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5
+}
+.nav>li>a>img {
+    max-width: none
+}
+.nav-tabs {
+    border-bottom: 1px solid #ddd
+}
+.nav-tabs>li {
+    float: left;
+    margin-bottom: -1px
+}
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0
+}
+.nav-tabs>li>a:hover {
+    border-color: #eee #eee #ddd
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default
+}
+.nav-pills>li {
+    float: left
+}
+.nav-pills>li>a {
+    border-radius: 4px
+}
+.nav-pills>li+li {
+    margin-left: 2px
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #428bca
+}
+.nav-stacked>li {
+    float: none
+}
+.nav-stacked>li+li {
+    margin-top: 2px;
+    margin-left: 0
+}
+.nav-justified,
+.nav-tabs.nav-justified {
+    width: 100%
+}
+.nav-justified>li,
+.nav-tabs.nav-justified>li {
+    float: none
+}
+.nav-justified>li>a,
+.nav-tabs.nav-justified>li>a {
+    text-align: center;
+    margin-bottom: 5px
+}
+.nav-justified>.dropdown .dropdown-menu {
+    top: auto;
+    left: auto
+}
+@media (min-width: 768px) {
+    .nav-justified>li,
+    .nav-tabs.nav-justified>li {
+        display: table-cell;
+        width: 1%
+    }
+    .nav-justified>li>a,
+    .nav-tabs.nav-justified>li>a {
+        margin-bottom: 0
+    }
+}
+.nav-tabs-justified,
+.nav-tabs.nav-justified {
+    border-bottom: 0
+}
+.nav-tabs-justified>li>a,
+.nav-tabs.nav-justified>li>a {
+    margin-right: 0;
+    border-radius: 4px
+}
+.nav-tabs-justified>.active>a,
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs-justified>.active>a:hover,
+.nav-tabs.nav-justified>.active>a:hover,
+.nav-tabs-justified>.active>a:focus,
+.nav-tabs.nav-justified>.active>a:focus {
+    border: 1px solid #ddd
+}
+@media (min-width: 768px) {
+    .nav-tabs-justified>li>a,
+    .nav-tabs.nav-justified>li>a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0
+    }
+    .nav-tabs-justified>.active>a,
+    .nav-tabs.nav-justified>.active>a,
+    .nav-tabs-justified>.active>a:hover,
+    .nav-tabs.nav-justified>.active>a:hover,
+    .nav-tabs-justified>.active>a:focus,
+    .nav-tabs.nav-justified>.active>a:focus {
+        border-bottom-color: #fff
+    }
+}
+.tab-content>.tab-pane {
+    display: none
+}
+.tab-content>.active {
+    display: block
+}
+.nav-tabs .dropdown-menu {
+    margin-top: -1px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
+.clearfix:after {
+    clear: both
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.pull-right {
+    float: right !important
+}
+.pull-left {
+    float: left !important
+}
+.hide {
+    display: none !important
+}
+.show {
+    display: block !important
+}
+.invisible {
+    visibility: hidden
+}
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0
+}
+.hidden {
+    display: none !important;
+    visibility: hidden !important
+}
+.affix {
+    position: fixed
+}
+.TituloSecao {
+    font-size: 32px;
+    margin: 0 0 0.67em 0;
+    text-transform: uppercase
+}
+.AzulEscuro,
+h1.Tema,
+h2.Tema,
+h3.Tema,
+h4.Tema,
+p.Tema,
+span.Tema,
+a.Tema,
+label.Tema,
+.BoxLateral.BoxSlider h3 a,
+.BoxInscreverNovidades .BoxHead,
+.Comodidade .Hint {
+    color: #005083
+}
+.Verde,
+.ProfissionaisSaude h1.Tema,
+.ProfissionaisSaude h2.Tema,
+.ProfissionaisSaude h3.Tema,
+.ProfissionaisSaude h4.Tema,
+.ProfissionaisSaude p.Tema,
+.ProfissionaisSaude span.Tema,
+.ProfissionaisSaude a.Tema,
+.ProfissionaisSaude label.Tema,
+.ProfissionaisSaude .BoxSlider h3 a {
+    color: #2ecc71
+}
+.Vermelho,
+.NucleosEspecializados h1.Tema,
+.NucleosEspecializados h2.Tema,
+.NucleosEspecializados h3.Tema,
+.NucleosEspecializados h4.Tema,
+.NucleosEspecializados p.Tema,
+.NucleosEspecializados span.Tema,
+.NucleosEspecializados a.Tema,
+.NucleosEspecializados label.Tema,
+.NucleosEspecializados .BoxSlider h3 a {
+    color: #e74c3c
+}
+.Roxo,
+.Vacinas h1.Tema,
+.Vacinas h2.Tema,
+.Vacinas h3.Tema,
+.Vacinas h4.Tema,
+.Vacinas p.Tema,
+.Vacinas span.Tema,
+.Vacinas a.Tema,
+.Vacinas label.Tema,
+.Vacinas .BoxSlider h3 a {
+    color: #a25dbf
+}
+.AzulClaro,
+.AnalisesClinicas h1.Tema,
+.AnalisesClinicas h2.Tema,
+.AnalisesClinicas h3.Tema,
+.AnalisesClinicas h4.Tema,
+.AnalisesClinicas p.Tema,
+.AnalisesClinicas span.Tema,
+.AnalisesClinicas a.Tema,
+.AnalisesClinicas label.Tema,
+.AnalisesClinicas .BoxSlider h3 a {
+    color: #3498db
+}
+.Ciano,
+.DiagnosticoImagem h1.Tema,
+.DiagnosticoImagem h2.Tema,
+.DiagnosticoImagem h3.Tema,
+.DiagnosticoImagem h4.Tema,
+.DiagnosticoImagem p.Tema,
+.DiagnosticoImagem span.Tema,
+.DiagnosticoImagem a.Tema,
+.DiagnosticoImagem label.Tema,
+.DiagnosticoImagem .BoxSlider h3 a {
+    color: #6bcbca
+}
+.Maiusculo {
+    text-transform: uppercase
+}
+.Negrito {
+    font-weight: bold
+}
+.iconsetas-sprite,
+.Setas .Seta.Prev:before,
+.Setas .Seta.Prev:hover:before,
+.Setas .Seta.Next:before,
+.Setas .Seta.Next:hover:before,
+.Setas .Ultima:after,
+.Setas .Ultima:hover:after,
+.Setas .Primeira:after,
+.Setas .Primeira:hover:after,
+.MenuContexto a:before,
+.AnalisesClinicas .Setas .Seta.Prev:before,
+.AnalisesClinicas .Setas .Seta.Prev:hover:before,
+.AnalisesClinicas .Setas .Seta.Next:before,
+.AnalisesClinicas .Setas .Seta.Next:hover:before,
+.AnalisesClinicas .Setas .Ultima:after,
+.AnalisesClinicas .Setas .Ultima:hover:after,
+.AnalisesClinicas .Setas .Primeira:after,
+.AnalisesClinicas .Setas .Primeira:hover:after,
+.AnalisesClinicas .MenuContexto a:before,
+.AnalisesClinicas .MenuContexto a.Ativo:before,
+.AnalisesClinicas .MenuContexto a:hover:before,
+.DiagnosticoImagem .Setas .Seta.Prev:before,
+.DiagnosticoImagem .Setas .Seta.Prev:hover:before,
+.DiagnosticoImagem .Setas .Seta.Next:before,
+.DiagnosticoImagem .Setas .Seta.Next:hover:before,
+.DiagnosticoImagem .Setas .Ultima:after,
+.DiagnosticoImagem .Setas .Ultima:hover:after,
+.DiagnosticoImagem .Setas .Primeira:after,
+.DiagnosticoImagem .Setas .Primeira:hover:after,
+.DiagnosticoImagem .MenuContexto a:before,
+.DiagnosticoImagem .MenuContexto a.Ativo:before,
+.DiagnosticoImagem .MenuContexto a:hover:before,
+.Vacinas .Setas .Seta.Prev:before,
+.Vacinas .Setas .Seta.Prev:hover:before,
+.Vacinas .Setas .Seta.Next:before,
+.Vacinas .Setas .Seta.Next:hover:before,
+.Vacinas .Setas .Ultima:after,
+.Vacinas .Setas .Ultima:hover:after,
+.Vacinas .Setas .Primeira:after,
+.Vacinas .Setas .Primeira:hover:after,
+.Vacinas .MenuContexto a:before,
+.Vacinas .MenuContexto a.Ativo:before,
+.Vacinas .MenuContexto a:hover:before,
+.NucleosEspecializados .Setas .Seta.Prev:before,
+.NucleosEspecializados .Setas .Seta.Prev:hover:before,
+.NucleosEspecializados .Setas .Seta.Next:before,
+.NucleosEspecializados .Setas .Seta.Next:hover:before,
+.NucleosEspecializados .Setas .Ultima:after,
+.NucleosEspecializados .Setas .Ultima:hover:after,
+.NucleosEspecializados .Setas .Primeira:after,
+.NucleosEspecializados .Setas .Primeira:hover:after,
+.NucleosEspecializados .MenuContexto a:before,
+.NucleosEspecializados .MenuContexto a.Ativo:before,
+.NucleosEspecializados .MenuContexto a:hover:before,
+.ProfissionaisSaude .Setas .Seta.Prev:before,
+.ProfissionaisSaude .Setas .Seta.Prev:hover:before,
+.ProfissionaisSaude .Setas .Seta.Next:before,
+.ProfissionaisSaude .Setas .Seta.Next:hover:before,
+.ProfissionaisSaude .Setas .Ultima:after,
+.ProfissionaisSaude .Setas .Ultima:hover:after,
+.ProfissionaisSaude .Setas .Primeira:after,
+.ProfissionaisSaude .Setas .Primeira:hover:after,
+.ProfissionaisSaude .MenuContexto a:before,
+.ProfissionaisSaude .MenuContexto a.Ativo:before,
+.ProfissionaisSaude .MenuContexto a:hover:before,
+.Setas.Paginacao .Inativa.Prev:before,
+.Setas.Paginacao .Inativa.Next:before,
+.Setas.Paginacao .Inativa.Primeira:after,
+.Setas.Paginacao .Inativa.Ultima:after,
+.MostraEsconde .Item.Aberto .ItemTitulo:after,
+.ItemTitulo:after {
+    background-image: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/iconsetas-s91283aed20.png');
+    background-repeat: no-repeat
+}
+.icon3636-sprite,
+.ButtonAjuda,
+.BoxInscreverNovidades .EmailIcone,
+.MenuPrincipal #analises_clinicas a:before,
+.MenuPrincipal #diagnostico_por_imagem a:before,
+.MenuPrincipal #vacinas a:before,
+.MenuPrincipal #nucleos_especializados a:before,
+.MenuPrincipal #apoio_a_parceiros a:before,
+.MenuPrincipal #profissionais_da_saude a:before,
+.IconeTelefone:before,
+.IconeMaleta:before,
+.IconeWhatsapp:before,
+header #profissionais_da_saude:before,
+.Busca .BtnPesquisar,
+.SlideNav li a,
+.SlideNav li.cycle-pager-active a,
+.BoxTabelaConversao a:before {
+    background-image: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/icon3636-s1ecac5977a.png');
+    background-repeat: no-repeat
+}
+.icon2540-sprite,
+.MenuSitemap #analises_clinicas_footer:before,
+.MenuSitemap #profissionais_da_saude_footer:before,
+.MenuSitemap #diagnostico_por_imagem_footer:before,
+.MenuSitemap #vacinas_footer:before,
+.MenuSitemap #nucleos_especializados_footer:before {
+    background-image: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/icon2540-sf54ed9440c.png');
+    background-repeat: no-repeat
+}
+.icon2525-sprite,
+.IconeLocal:before,
+.IconeTelMenor:before,
+.Comodidades .Estacionamento,
+.Comodidades .Wifi,
+.Comodidades .WiFi,
+.Comodidades .Vacinas,
+.Comodidades .Acessivel,
+.Comodidades .AcessibilidadeCompleta,
+.Comodidades .Bicicletario {
+    background-image: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/icon2525-s73e7564d4e.png');
+    background-repeat: no-repeat
+}
+.icon110110-sprite,
+.SlideAnalisesClinicas .SlideIcon,
+.SlideDiagnosticoImagem .SlideIcon,
+.SlideVacinas .SlideIcon,
+.SlideNucleosEspecializados .SlideIcon,
+.SlideProfissionaisSaude .SlideIcon {
+    background-image: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/icon110110-s8bf555a367.png');
+    background-repeat: no-repeat
+}
+.form-group {
+    margin-bottom: 10px
+}
+.Setas.Paginacao:before,
+.Setas.Paginacao:after {
+    content: " ";
+    display: block;
+    height: 0px;
+    width: 100%
+}
+.MenuSitemap #analises_clinicas_footer,
+.MenuSitemap #profissionais_da_saude_footer,
+.MenuSitemap #diagnostico_por_imagem_footer,
+.MenuSitemap #vacinas_footer,
+.MenuSitemap #nucleos_especializados_footer,
+.MenuPrincipal #analises_clinicas a,
+.MenuPrincipal #diagnostico_por_imagem a,
+.MenuPrincipal #vacinas a,
+.MenuPrincipal #nucleos_especializados a,
+.MenuPrincipal #apoio_a_parceiros a,
+.MenuPrincipal #profissionais_da_saude a,
+.IconeTelefone,
+.IconeMaleta,
+.IconeWhatsapp,
+header #profissionais_da_saude {
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.MenuSitemap #analises_clinicas_footer:before,
+.MenuSitemap #profissionais_da_saude_footer:before,
+.MenuSitemap #diagnostico_por_imagem_footer:before,
+.MenuSitemap #vacinas_footer:before,
+.MenuSitemap #nucleos_especializados_footer:before,
+.MenuPrincipal #analises_clinicas a:before,
+.MenuPrincipal #diagnostico_por_imagem a:before,
+.MenuPrincipal #vacinas a:before,
+.MenuPrincipal #nucleos_especializados a:before,
+.MenuPrincipal #apoio_a_parceiros a:before,
+.MenuPrincipal #profissionais_da_saude a:before,
+.IconeTelefone:before,
+.IconeMaleta:before,
+.IconeWhatsapp:before,
+header #profissionais_da_saude:before {
+    content: " ";
+    display: inline-block;
+    float: left;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px
+}
+.MenuSitemap #analises_clinicas_footer .TextoLink,
+.MenuSitemap #profissionais_da_saude_footer .TextoLink,
+.MenuSitemap #diagnostico_por_imagem_footer .TextoLink,
+.MenuSitemap #vacinas_footer .TextoLink,
+.MenuSitemap #nucleos_especializados_footer .TextoLink,
+.MenuPrincipal #analises_clinicas a .TextoLink,
+.MenuPrincipal #diagnostico_por_imagem a .TextoLink,
+.MenuPrincipal #vacinas a .TextoLink,
+.MenuPrincipal #nucleos_especializados a .TextoLink,
+.MenuPrincipal #apoio_a_parceiros a .TextoLink,
+.MenuPrincipal #profissionais_da_saude a .TextoLink,
+.IconeTelefone .TextoLink,
+.IconeMaleta .TextoLink,
+.IconeWhatsapp .TextoLink,
+header #profissionais_da_saude .TextoLink {
+    display: inline-block;
+    float: left;
+    min-height: 20px;
+    padding: 8px 10px;
+    white-space: nowrap;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0
+}
+.MenuSitemap #analises_clinicas_footer,
+.MenuSitemap #profissionais_da_saude_footer,
+.MenuSitemap #diagnostico_por_imagem_footer,
+.MenuSitemap #vacinas_footer,
+.MenuSitemap #nucleos_especializados_footer {
+    display: block;
+    float: left;
+    font-size: 14px;
+    border-top: 1px solid #f1f4f4;
+    padding: 9px 0 10px 0
+}
+.MenuSitemap #analises_clinicas_footer:before,
+.MenuSitemap #profissionais_da_saude_footer:before,
+.MenuSitemap #diagnostico_por_imagem_footer:before,
+.MenuSitemap #vacinas_footer:before,
+.MenuSitemap #nucleos_especializados_footer:before {
+    height: 40px;
+    margin-left: 4px;
+    margin-top: 6px;
+    width: 25px
+}
+.MenuSitemap #analises_clinicas_footer .TextoLink,
+.MenuSitemap #profissionais_da_saude_footer .TextoLink,
+.MenuSitemap #diagnostico_por_imagem_footer .TextoLink,
+.MenuSitemap #vacinas_footer .TextoLink,
+.MenuSitemap #nucleos_especializados_footer .TextoLink {
+    padding: 8px 8px;
+    white-space: normal;
+    width: 69%
+}
+.ToMenuSecao li a,
+.AnalisesClinicas .ToMenuSecao li a,
+.DiagnosticoImagem .ToMenuSecao li a,
+.Vacinas .ToMenuSecao li a,
+.NucleosEspecializados .ToMenuSecao li a,
+.ProfissionaisSaude .ToMenuSecao li a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px 8px 9px 0px;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.ToMenuSecao li a:before,
+.AnalisesClinicas .ToMenuSecao li a:before,
+.DiagnosticoImagem .ToMenuSecao li a:before,
+.Vacinas .ToMenuSecao li a:before,
+.NucleosEspecializados .ToMenuSecao li a:before,
+.ProfissionaisSaude .ToMenuSecao li a:before {
+    content: " ";
+    display: block;
+    float: left;
+    height: 20px;
+    margin-right: 6px;
+    width: 1px
+}
+.ToMenuSecao li:first-child a:before {
+    background-color: transparent !important
+}
+.Button {
+    background-color: #fff;
+    border: 0;
+    border-bottom: 4px solid #fff;
+    color: #fff;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 7px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.Button:active {
+    border-bottom-width: 2px;
+    border-top: 2px solid transparent
+}
+.ButtonAjuda {
+    text-indent: -9999px;
+    display: block;
+    height: 36px;
+    width: 36px;
+    background-position: 0 0
+}
+.LinhaSeparaBranca {
+    display: block;
+    float: left;
+    height: 100%;
+    width: 1px
+}
+.LinhaSeparaBranca {
+    background-color: #fff
+}
+.RespiroRadio {
+    margin-left: 20px !important
+}
+.Setas .Seta.Prev:before,
+.Setas .Seta.Prev:hover:before,
+.Setas .Seta.Next:before,
+.Setas .Seta.Next:hover:before,
+.MenuContexto a:before,
+.AnalisesClinicas .Setas .Seta.Prev:before,
+.AnalisesClinicas .Setas .Seta.Prev:hover:before,
+.AnalisesClinicas .Setas .Seta.Next:before,
+.AnalisesClinicas .Setas .Seta.Next:hover:before,
+.AnalisesClinicas .MenuContexto a:before,
+.AnalisesClinicas .MenuContexto a.Ativo:before,
+.AnalisesClinicas .MenuContexto a:hover:before,
+.DiagnosticoImagem .Setas .Seta.Prev:before,
+.DiagnosticoImagem .Setas .Seta.Prev:hover:before,
+.DiagnosticoImagem .Setas .Seta.Next:before,
+.DiagnosticoImagem .Setas .Seta.Next:hover:before,
+.DiagnosticoImagem .MenuContexto a:before,
+.DiagnosticoImagem .MenuContexto a.Ativo:before,
+.DiagnosticoImagem .MenuContexto a:hover:before,
+.Vacinas .Setas .Seta.Prev:before,
+.Vacinas .Setas .Seta.Prev:hover:before,
+.Vacinas .Setas .Seta.Next:before,
+.Vacinas .Setas .Seta.Next:hover:before,
+.Vacinas .MenuContexto a:before,
+.Vacinas .MenuContexto a.Ativo:before,
+.Vacinas .MenuContexto a:hover:before,
+.NucleosEspecializados .Setas .Seta.Prev:before,
+.NucleosEspecializados .Setas .Seta.Prev:hover:before,
+.NucleosEspecializados .Setas .Seta.Next:before,
+.NucleosEspecializados .Setas .Seta.Next:hover:before,
+.NucleosEspecializados .MenuContexto a:before,
+.NucleosEspecializados .MenuContexto a.Ativo:before,
+.NucleosEspecializados .MenuContexto a:hover:before,
+.ProfissionaisSaude .Setas .Seta.Prev:before,
+.ProfissionaisSaude .Setas .Seta.Prev:hover:before,
+.ProfissionaisSaude .Setas .Seta.Next:before,
+.ProfissionaisSaude .Setas .Seta.Next:hover:before,
+.ProfissionaisSaude .MenuContexto a:before,
+.ProfissionaisSaude .MenuContexto a.Ativo:before,
+.ProfissionaisSaude .MenuContexto a:hover:before,
+.Setas.Paginacao .Inativa.Prev:before,
+.Setas.Paginacao .Inativa.Next:before {
+    content: " ";
+    display: inline-block;
+    float: left;
+    height: 16px;
+    margin-top: 2px;
+    width: 11px
+}
+.Setas .Ultima:after,
+.Setas .Ultima:hover:after,
+.Setas .Primeira:after,
+.Setas .Primeira:hover:after,
+.AnalisesClinicas .Setas .Ultima:after,
+.AnalisesClinicas .Setas .Ultima:hover:after,
+.AnalisesClinicas .Setas .Primeira:after,
+.AnalisesClinicas .Setas .Primeira:hover:after,
+.DiagnosticoImagem .Setas .Ultima:after,
+.DiagnosticoImagem .Setas .Ultima:hover:after,
+.DiagnosticoImagem .Setas .Primeira:after,
+.DiagnosticoImagem .Setas .Primeira:hover:after,
+.Vacinas .Setas .Ultima:after,
+.Vacinas .Setas .Ultima:hover:after,
+.Vacinas .Setas .Primeira:after,
+.Vacinas .Setas .Primeira:hover:after,
+.NucleosEspecializados .Setas .Ultima:after,
+.NucleosEspecializados .Setas .Ultima:hover:after,
+.NucleosEspecializados .Setas .Primeira:after,
+.NucleosEspecializados .Setas .Primeira:hover:after,
+.ProfissionaisSaude .Setas .Ultima:after,
+.ProfissionaisSaude .Setas .Ultima:hover:after,
+.ProfissionaisSaude .Setas .Primeira:after,
+.ProfissionaisSaude .Setas .Primeira:hover:after,
+.Setas.Paginacao .Inativa.Primeira:after,
+.Setas.Paginacao .Inativa.Ultima:after,
+.MostraEsconde .Item.Aberto .ItemTitulo:after,
+.ItemTitulo:after {
+    content: " ";
+    display: inline-block;
+    float: left;
+    height: 16px;
+    margin-top: 2px;
+    width: 11px
+}
+.Setas,
+.AnalisesClinicas .Setas,
+.DiagnosticoImagem .Setas,
+.Vacinas .Setas,
+.NucleosEspecializados .Setas,
+.ProfissionaisSaude .Setas {
+    float: right
+}
+.Setas ul,
+.AnalisesClinicas .Setas ul,
+.DiagnosticoImagem .Setas ul,
+.Vacinas .Setas ul,
+.NucleosEspecializados .Setas ul,
+.ProfissionaisSaude .Setas ul {
+    font-size: 16px;
+    list-style: none;
+    padding: 0
+}
+.Setas li,
+.AnalisesClinicas .Setas li,
+.DiagnosticoImagem .Setas li,
+.Vacinas .Setas li,
+.NucleosEspecializados .Setas li,
+.ProfissionaisSaude .Setas li {
+    display: inline-block
+}
+.Setas .Seta {
+    float: left;
+    margin: 0;
+    text-indent: -9999px;
+    width: 50%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.Setas .Seta.Prev {
+    padding: 3px 4px 1px 2px
+}
+.Setas .Seta.Next {
+    padding: 3px 3px 1px 3px
+}
+.Setas .Seta:hover {
+    cursor: pointer
+}
+.Setas .Seta:before {
+    margin-right: 3px
+}
+.BoxInscreverNovidades .EmailContainer {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 211px
+}
+.BoxInscreverNovidades .EmailIcone {
+    background-color: #eceeee;
+    border-top: 1px solid #eaeaea;
+    border-right: 0;
+    border-bottom: 1px solid #eaeaea;
+    border-left: 1px solid #eaeaea;
+    float: left;
+    height: 37px;
+    text-indent: -9999px;
+    width: 36px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    background-position: 0 -180px
+}
+.BoxInscreverNovidades .TxtNewsEmail {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    color: #777777;
+    float: left;
+    font-size: 13px;
+    font-style: italic;
+    min-height: 18px;
+    padding: 8px 0 8px 10px;
+    width: 108px
+}
+.BoxInscreverNovidades .BtnEmail {
+    color: #fff;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 16px 8px 16px;
+    text-decoration: none;
+    -webkit-border-radius: 0 4px 4px 0;
+    -moz-border-radius: 0 4px 4px 0;
+    border-radius: 0 4px 4px 0
+}
+.ToSiteMap {
+    margin-top: 24px;
+    max-height: 292px;
+    overflow: hidden
+}
+.MenuSitemap {
+    background-color: #fff;
+    border-right: 1px solid #f6f6f6;
+    float: left;
+    min-height: 292px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.MenuSitemap ul {
+    list-style: none
+}
+.MenuSitemap li.Secao {
+    display: inline-block;
+    float: left;
+    height: 292px;
+    width: 147px
+}
+.MenuSitemap .Internas li {
+    clear: both;
+    float: left
+}
+.MenuSitemap .Internas a {
+    color: #00558f;
+    display: block;
+    font-size: 13px;
+    padding: 3px 0 1px 8px;
+    text-decoration: none
+}
+.MenuSitemap .Internas a:hover {
+    color: #0073c2;
+    text-decoration: underline
+}
+.MenuSitemap #analises_clinicas_footer {
+    background-color: #eef0f1;
+    color: #024f86
+}
+.MenuSitemap #analises_clinicas_footer:hover {
+    background-color: #f1f2f3
+}
+.MenuSitemap #analises_clinicas_footer:before {
+    background-position: 0 -160px
+}
+.MenuSitemap #profissionais_da_saude_footer {
+    background-color: #f4f7f7;
+    color: #024f86
+}
+.MenuSitemap #profissionais_da_saude_footer:hover {
+    background-color: #f7f9f9
+}
+.MenuSitemap #profissionais_da_saude_footer:before {
+    background-position: 0 -40px
+}
+.MenuSitemap #diagnostico_por_imagem_footer {
+    background-color: #eef0f1;
+    color: #024f86
+}
+.MenuSitemap #diagnostico_por_imagem_footer:hover {
+    background-color: #f1f2f3
+}
+.MenuSitemap #diagnostico_por_imagem_footer:before {
+    background-position: 0 0
+}
+.MenuSitemap #vacinas_footer {
+    background-color: #f4f7f7;
+    color: #024f86;
+    height: 76px;
+    width: 147px
+}
+.MenuSitemap #vacinas_footer:hover {
+    background-color: #f7f9f9
+}
+.MenuSitemap #vacinas_footer:before {
+    background-position: 0 -120px
+}
+.MenuSitemap #nucleos_especializados_footer {
+    background-color: #eef0f1;
+    color: #024f86
+}
+.MenuSitemap #nucleos_especializados_footer:hover {
+    background-color: #f1f2f3
+}
+.MenuSitemap #nucleos_especializados_footer:before {
+    background-position: 0 -80px
+}
+.MenuSitemap .Odd {
+    background-color: #f6f6f6
+}
+.MenuPrincipal li {
+    margin-right: 6px
+}
+.MenuPrincipal #analises_clinicas a {
+    color: #fff;
+    height: 36px
+}
+.MenuPrincipal #analises_clinicas a:before {
+    background-color: #2c89c8;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -504px
+}
+.MenuPrincipal #analises_clinicas a:hover .TextoLink {
+    background-color: #5faee3
+}
+.MenuPrincipal #analises_clinicas a .TextoLink {
+    background-color: #3498db
+}
+.MenuPrincipal #diagnostico_por_imagem a {
+    color: #fff;
+    height: 36px
+}
+.MenuPrincipal #diagnostico_por_imagem a:before {
+    background-color: #60b8b7;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -108px
+}
+.MenuPrincipal #diagnostico_por_imagem a:hover .TextoLink {
+    background-color: #91d8d8
+}
+.MenuPrincipal #diagnostico_por_imagem a .TextoLink {
+    background-color: #6bcbca
+}
+.MenuPrincipal #vacinas a {
+    color: #fff;
+    height: 36px
+}
+.MenuPrincipal #vacinas a:before {
+    background-color: #8d50a6;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -360px
+}
+.MenuPrincipal #vacinas a:hover .TextoLink {
+    background-color: #b782cd
+}
+.MenuPrincipal #vacinas a .TextoLink {
+    background-color: #a25dbf
+}
+.MenuPrincipal #nucleos_especializados a {
+    color: #fff;
+    height: 36px
+}
+.MenuPrincipal #nucleos_especializados a:before {
+    background-color: #d54435;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -324px
+}
+.MenuPrincipal #nucleos_especializados a:hover .TextoLink {
+    background-color: #ed7669
+}
+.MenuPrincipal #nucleos_especializados a .TextoLink {
+    background-color: #e74c3c
+}
+.MenuPrincipal #apoio_a_parceiros a {
+    color: #fff;
+    height: 36px
+}
+.MenuPrincipal #apoio_a_parceiros a:before {
+    background-color: #d54435;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -324px
+}
+.MenuPrincipal #apoio_a_parceiros a:hover .TextoLink {
+    background-color: #ed7669
+}
+.MenuPrincipal #apoio_a_parceiros a .TextoLink {
+    background-color: #e74c3c
+}
+.MenuPrincipal #profissionais_da_saude a {
+    color: #fff;
+    height: 36px
+}
+.MenuPrincipal #profissionais_da_saude a:before {
+    background-color: #27ae60;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -144px
+}
+.MenuPrincipal #profissionais_da_saude a:hover .TextoLink {
+    background-color: #54d98c
+}
+.MenuPrincipal #profissionais_da_saude a .TextoLink {
+    background-color: #2ecc71
+}
+.IconeTelefone {
+    color: #024e83;
+    height: 36px
+}
+.IconeTelefone:before {
+    background-color: transparent;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -468px
+}
+.IconeTelefone:hover .TextoLink {
+    text-decoration: underline
+}
+.IconeTelefone .TextoLink {
+    background-color: transparent
+}
+.IconeMaleta {
+    color: #024e83;
+    height: 36px
+}
+.IconeMaleta:before {
+    background-color: transparent;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -252px
+}
+.IconeMaleta:hover .TextoLink {
+    text-decoration: underline
+}
+.IconeMaleta .TextoLink {
+    background-color: transparent
+}
+.IconeWhatsapp {
+    color: #024e83;
+    height: 26px;
+    margin-top: 3px
+}
+.IconeWhatsapp:before {
+    background-color: transparent;
+    height: 26px;
+    width: 31px;
+    background-position: 0 -540px
+}
+.IconeWhatsapp:hover .TextoLink {
+    text-decoration: underline
+}
+.IconeWhatsapp .TextoLink {
+    background-color: transparent
+}
+.IconeTelefone .TextoLink,
+.IconeMaleta .TextoLink,
+.IconeWhatsapp .TextoLink {
+    border-right: 1px solid #e3e3e3;
+    font-size: 12px;
+    min-height: 18px;
+    padding: 10px 14px 10px 10px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0
+}
+header #profissionais_da_saude {
+    float: right;
+    color: #fff;
+    height: 36px
+}
+header #profissionais_da_saude:before {
+    background-color: #27ae60;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -144px
+}
+header #profissionais_da_saude:hover .TextoLink {
+    background-color: #54d98c
+}
+header #profissionais_da_saude .TextoLink {
+    background-color: #2ecc71
+}
+header #profissionais_da_saude .TextoLink {
+    font-size: 14px;
+    -webkit-border-radius: 0 0 4px 0;
+    -moz-border-radius: 0 0 4px 0;
+    border-radius: 0 0 4px 0
+}
+header #profissionais_da_saude:before {
+    -webkit-border-radius: 0 0 0 4px;
+    -moz-border-radius: 0 0 0 4px;
+    border-radius: 0 0 0 4px
+}
+.MenuPrincipal ul,
+.MenuInstitucional ul,
+.MenuSecao ul {
+    padding: 0;
+    list-style: none
+}
+.MenuPrincipal li,
+.MenuInstitucional li,
+.MenuSecao li {
+    display: inline-block;
+    float: left
+}
+.MenuPrincipal li a,
+.MenuInstitucional li a,
+.MenuSecao li a {
+    display: inline-block
+}
+.ToMenuSecao {
+    margin-top: -7px
+}
+.MenuPrincipal {
+    clear: both;
+    float: left;
+    width: 100%
+}
+.MenuInstitucional {
+    background-color: #fff;
+    clear: right;
+    float: left;
+    margin-top: 15px;
+    text-align: center;
+    width: 739px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.MenuInstitucional ul {
+    margin-left: 10px
+}
+.MenuInstitucional li a {
+    background-color: #fff;
+    border-bottom: 3px solid #f9f9f9;
+    color: #414141;
+    font-size: 14px;
+    padding: 10px 8px 7px 8px;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.MenuInstitucional li a.Ativo {
+    border-bottom-color: #414141
+}
+.MenuInstitucional li a:hover {
+    border-bottom-color: #929191
+}
+.MenuInstitucional li {
+    border-left: 1px solid #e3e3e3;
+    float: left
+}
+.MenuInstitucional li:first-child {
+    border-left: none
+}
+.MenuContexto {
+    float: left;
+    margin-bottom: 13px
+}
+.MenuContexto ul {
+    clear: both;
+    font-size: 15px;
+    list-style: none
+}
+.MenuContexto li {
+    display: block
+}
+.MenuContexto a {
+    display: block;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 219px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.MenuContexto a:before {
+    margin-right: 7px
+}
+.MenuSuporteTopo {
+    float: right;
+    color: white;
+    height: 36px;
+    width: 221px
+}
+.MenuApoio {
+    display: inline-block;
+    float: left;
+    margin-top: 7px;
+    width: 330px
+}
+.MenuApoio li {
+    display: inline-block
+}
+.ToMenuSecao {
+    background-color: #A25DBF;
+    border-bottom: 2px solid #8D50A6
+}
+.ToMenuSecao li {
+    padding: 0
+}
+.ToMenuSecao li:hover {
+    background-color: #006fb6
+}
+.ToMenuSecao li.Ativo {
+    background-color: #862e91
+}
+.ToMenuSecao li a:before {
+    background-color: #006fb6
+}
+.Setas .Seta {
+    border: 1px solid #e5482e
+}
+.Setas .Seta:hover {
+    background-color: #e5482e
+}
+.Setas .Inativa {
+    cursor: default
+}
+.Setas .Inativa:hover {
+    background: none !important
+}
+.Setas .Seta.Prev:before {
+    background-position: 0 -208px
+}
+.Setas .Seta.Prev:hover:before {
+    background-position: 0 -80px
+}
+.Setas .Seta.Next:before {
+    background-position: 0 -192px
+}
+.Setas .Seta.Next:hover:before {
+    background-position: 0 -64px
+}
+.Setas .Ultima:after {
+    background-position: 0 -192px
+}
+.Setas .Ultima:hover:after {
+    background-position: 0 -64px
+}
+.Setas .Primeira:after {
+    background-position: 0 -208px
+}
+.Setas .Primeira:hover:after {
+    background-position: 0 -80px
+}
+.MenuContexto a {
+    background-color: #dae2e4;
+    color: #005083
+}
+.MenuContexto a:before {
+    background-position: 0 -192px
+}
+.MenuContexto a.Ativo {
+    background-color: #fff
+}
+.MenuContexto a:hover {
+    background-color: #fff
+}
+.BoxInscreverNovidades .BoxHead {
+    background-color: #dae2e4
+}
+.BoxInscreverNovidades .BoxBody {
+    background-color: #fff
+}
+.BoxInscreverNovidades .BtnEmail {
+    background-color: #e5492f;
+    border: 1px solid #e5492f
+}
+.BoxInscreverNovidades .BtnEmail:hover {
+    background-color: #eb715c
+}
+.BoxLaboratorios {
+    background-color: #fff
+}
+.BoxLaboratorios h3,
+.BoxLaboratorios a {
+    color: #005083
+}
+.BoxUnidades .Layer {
+    background: url(/Repositorio/Templates/Geral/img/bck.azul-escuro-a80.png)
+}
+.BoxAgendamentos {
+    background-color: #005083
+}
+.BoxResultados {
+    background-color: #fff
+}
+.BoxResultados .BoxHead {
+    background-color: #005083
+}
+.Alfabeto a {
+    background: #fff;
+    color: #005083
+}
+.Alfabeto a:hover {
+    background-color: #005083;
+    color: #fff
+}
+.ListaPlanos {
+    background: #fff
+}
+.FormHead {
+    background: #005083;
+    border-bottom: 5px solid #003a5f
+}
+.EsqueciSenha {
+    color: #005083
+}
+.BtnFechar:hover:after {
+    background-color: #83cfff
+}
+.BoxTabelaConversao a {
+    background-color: #005083;
+    border: 1px solid #005083
+}
+.BoxTabelaConversao a:hover {
+    background-color: #006fb6
+}
+.ItemTitulo {
+    background-color: #005083;
+    border: 1px solid #005083
+}
+.ItemTitulo:hover {
+    background-color: #006fb6
+}
+.TabelaConversoes tbody td {
+    border-top: 3px solid #005083
+}
+.TabelaPalestra tbody td {
+    border-top: 1px solid #005083
+}
+.TabelaSite {
+    background-color: #005083;
+    border: 3px solid #005083
+}
+.TabelaSite thead td {
+    background-color: #006fb6
+}
+.Button {
+    color: #fff !important;
+    text-align: center
+}
+.SlideInstitucional h3,
+.SlideInstitucional p {
+    background: url(/Repositorio/Templates/Geral/img/bck.azul-escuro-a80.png)
+}
+.SlideInstitucional a.Button {
+    color: #fff
+}
+.AnalisesClinicas a,
+.AnalisesClinicas a:hover,
+.AnalisesClinicas a:focus {
+    color: #3498db
+}
+.AnalisesClinicas .ToMenuSecao {
+    background-color: #3498db;
+    border-bottom: 2px solid #258cd1
+}
+.AnalisesClinicas .ToMenuSecao li {
+    padding: 0
+}
+.AnalisesClinicas .ToMenuSecao li:hover {
+    background-color: #5faee3
+}
+.AnalisesClinicas .ToMenuSecao li.Ativo {
+    background-color: #258cd1
+}
+.AnalisesClinicas .ToMenuSecao li a:before {
+    background-color: #5faee3
+}
+.AnalisesClinicas .Setas .Seta {
+    border: 1px solid #3498db
+}
+.AnalisesClinicas .Setas .Seta:hover {
+    background-color: #3498db
+}
+.AnalisesClinicas .Setas .Inativa {
+    cursor: default
+}
+.AnalisesClinicas .Setas .Inativa:hover {
+    background: none !important
+}
+.AnalisesClinicas .Setas .Seta.Prev:before {
+    background-position: 0 -16px
+}
+.AnalisesClinicas .Setas .Seta.Prev:hover:before {
+    background-position: 0 -80px
+}
+.AnalisesClinicas .Setas .Seta.Next:before {
+    background-position: 0 0
+}
+.AnalisesClinicas .Setas .Seta.Next:hover:before {
+    background-position: 0 -64px
+}
+.AnalisesClinicas .Setas .Ultima:after {
+    background-position: 0 0
+}
+.AnalisesClinicas .Setas .Ultima:hover:after {
+    background-position: 0 -64px
+}
+.AnalisesClinicas .Setas .Primeira:after {
+    background-position: 0 -16px
+}
+.AnalisesClinicas .Setas .Primeira:hover:after {
+    background-position: 0 -80px
+}
+.AnalisesClinicas .MenuContexto a {
+    background-color: #fff;
+    color: #3498db
+}
+.AnalisesClinicas .MenuContexto a:before {
+    background-position: 0 0
+}
+.AnalisesClinicas .MenuContexto a.Ativo,
+.AnalisesClinicas .MenuContexto a:hover {
+    background-color: #3498db;
+    color: #fff
+}
+.AnalisesClinicas .MenuContexto a.Ativo:before,
+.AnalisesClinicas .MenuContexto a:hover:before {
+    background-position: 0 -64px
+}
+.AnalisesClinicas .BoxInscreverNovidades .BoxHead {
+    background-color: #3498db;
+    color: #fff
+}
+.AnalisesClinicas .BoxInscreverNovidades .BoxHead p {
+    color: #fff
+}
+.AnalisesClinicas .BoxInscreverNovidades .BtnEmail {
+    background-color: #3498db;
+    border: 1px solid #3498db
+}
+.AnalisesClinicas .BoxInscreverNovidades .BtnEmail:hover {
+    background-color: #5faee3
+}
+.AnalisesClinicas .BoxLaboratorios {
+    background-color: #fff
+}
+.AnalisesClinicas .BoxLaboratorios h3,
+.AnalisesClinicas .BoxLaboratorios a {
+    color: #3498db
+}
+.AnalisesClinicas .BoxUnidades .Layer {
+    background: url(/Repositorio/Templates/Geral/img/bck.azul-claro-a80.png)
+}
+.AnalisesClinicas .BoxAgendamentos {
+    background-color: #3498db
+}
+.AnalisesClinicas .BoxResultados .BoxHead {
+    background-color: #3498db
+}
+.AnalisesClinicas .Alfabeto a {
+    background: #fff;
+    color: #3498db
+}
+.AnalisesClinicas .Alfabeto a:hover {
+    background-color: #3498db;
+    color: #fff
+}
+.AnalisesClinicas .ListaPlanos {
+    background: #fff
+}
+.AnalisesClinicas .FormHead {
+    background: #3498db;
+    border-bottom: 5px solid #2386c8
+}
+.AnalisesClinicas .EsqueciSenha {
+    color: #3498db
+}
+.AnalisesClinicas .BoxTabelaConversao a {
+    background-color: #3498db;
+    border: 1px solid #3498db
+}
+.AnalisesClinicas .BoxTabelaConversao a:hover {
+    background-color: #5faee3
+}
+.AnalisesClinicas .ItemTitulo {
+    background-color: #3498db;
+    border: 1px solid #3498db
+}
+.AnalisesClinicas .ItemTitulo:hover {
+    background-color: #5faee3
+}
+.AnalisesClinicas .TabelaConversoes tbody td {
+    border-top: 3px solid #3498db
+}
+.AnalisesClinicas .TabelaPalestra tbody td {
+    border-top: 1px solid #3498db
+}
+.AnalisesClinicas .TabelaSite {
+    background-color: #3498db;
+    border: 3px solid #3498db
+}
+.AnalisesClinicas .TabelaSite thead td {
+    background-color: #5faee3
+}
+.SlideAnalisesClinicas h3,
+.SlideAnalisesClinicas p {
+    background: url(/Repositorio/Templates/Geral/img/bck.azul-claro-a80.png)
+}
+.SlideAnalisesClinicas a.Button {
+    color: #fff
+}
+.SlideAnalisesClinicas .SlideIcon {
+    background-position: 0 -476px
+}
+.DiagnosticoImagem a,
+.DiagnosticoImagem a:hover,
+.DiagnosticoImagem a:focus {
+    color: #fff
+}
+.DiagnosticoImagem a.Button,
+.DiagnosticoImagem a:hover.Button,
+.DiagnosticoImagem a:focus.Button {
+    color: #fff
+}
+.DiagnosticoImagem .ToMenuSecao {
+    background-color: #6bcbca;
+    border-bottom: 2px solid #58c4c3
+}
+.DiagnosticoImagem .ToMenuSecao li {
+    padding: 0
+}
+.DiagnosticoImagem .ToMenuSecao li:hover {
+    background-color: #91d8d8
+}
+.DiagnosticoImagem .ToMenuSecao li.Ativo {
+    background-color: #58c4c3
+}
+.DiagnosticoImagem .ToMenuSecao li a:before {
+    background-color: #91d8d8
+}
+.DiagnosticoImagem .Setas .Seta {
+    border: 1px solid #6bcbca
+}
+.DiagnosticoImagem .Setas .Seta:hover {
+    background-color: #6bcbca
+}
+.DiagnosticoImagem .Setas .Inativa {
+    cursor: default
+}
+.DiagnosticoImagem .Setas .Inativa:hover {
+    background: none !important
+}
+.DiagnosticoImagem .Setas .Seta.Prev:before {
+    background-position: 0 -112px
+}
+.DiagnosticoImagem .Setas .Seta.Prev:hover:before {
+    background-position: 0 -80px
+}
+.DiagnosticoImagem .Setas .Seta.Next:before {
+    background-position: 0 -96px
+}
+.DiagnosticoImagem .Setas .Seta.Next:hover:before {
+    background-position: 0 -64px
+}
+.DiagnosticoImagem .Setas .Ultima:after {
+    background-position: 0 -96px
+}
+.DiagnosticoImagem .Setas .Ultima:hover:after {
+    background-position: 0 -64px
+}
+.DiagnosticoImagem .Setas .Primeira:after {
+    background-position: 0 -112px
+}
+.DiagnosticoImagem .Setas .Primeira:hover:after {
+    background-position: 0 -80px
+}
+.DiagnosticoImagem .MenuContexto a {
+    background-color: #fff;
+    color: #6bcbca
+}
+.DiagnosticoImagem .MenuContexto a:before {
+    background-position: 0 -96px
+}
+.DiagnosticoImagem .MenuContexto a.Ativo,
+.DiagnosticoImagem .MenuContexto a:hover {
+    background-color: #6bcbca;
+    color: #fff
+}
+.DiagnosticoImagem .MenuContexto a.Ativo:before,
+.DiagnosticoImagem .MenuContexto a:hover:before {
+    background-position: 0 -64px
+}
+.DiagnosticoImagem .BoxInscreverNovidades .BoxHead {
+    background-color: #6bcbca;
+    color: #fff
+}
+.DiagnosticoImagem .BoxInscreverNovidades .BoxHead p {
+    color: #fff
+}
+.DiagnosticoImagem .BoxInscreverNovidades .BtnEmail {
+    background-color: #6bcbca;
+    border: 1px solid #6bcbca
+}
+.DiagnosticoImagem .BoxInscreverNovidades .BtnEmail:hover {
+    background-color: #91d8d8
+}
+.DiagnosticoImagem .BoxLaboratorios {
+    background-color: #fff
+}
+.DiagnosticoImagem .BoxLaboratorios h3,
+.DiagnosticoImagem .BoxLaboratorios a {
+    color: #6bcbca
+}
+.DiagnosticoImagem .BoxUnidades .Layer {
+    background: url(/Repositorio/Templates/Geral/img/bck.ciano-a85.png)
+}
+.DiagnosticoImagem .BoxAgendamentos {
+    background-color: #6bcbca
+}
+.DiagnosticoImagem .BoxResultados .BoxHead {
+    background-color: #6bcbca
+}
+.DiagnosticoImagem .Alfabeto a {
+    background: #fff;
+    color: #6bcbca
+}
+.DiagnosticoImagem .Alfabeto a:hover {
+    background-color: #6bcbca;
+    color: #fff
+}
+.DiagnosticoImagem .ListaPlanos {
+    background: #fff
+}
+.DiagnosticoImagem .FormHead {
+    background: #6bcbca;
+    border-bottom: 5px solid #51c2c1
+}
+.DiagnosticoImagem .EsqueciSenha {
+    color: #6bcbca
+}
+.DiagnosticoImagem .BoxTabelaConversao a {
+    background-color: #6bcbca;
+    border: 1px solid #6bcbca
+}
+.DiagnosticoImagem .BoxTabelaConversao a:hover {
+    background-color: #91d8d8
+}
+.DiagnosticoImagem .ItemTitulo {
+    background-color: #6bcbca;
+    border: 1px solid #6bcbca
+}
+.DiagnosticoImagem .ItemTitulo:hover {
+    background-color: #91d8d8
+}
+.DiagnosticoImagem .TabelaConversoes tbody td {
+    border-top: 3px solid #6bcbca
+}
+.DiagnosticoImagem .TabelaPalestra tbody td {
+    border-top: 1px solid #6bcbca
+}
+.DiagnosticoImagem .TabelaSite {
+    background-color: #6bcbca;
+    border: 3px solid #6bcbca
+}
+.DiagnosticoImagem .TabelaSite thead td {
+    background-color: #91d8d8
+}
+.SlideDiagnosticoImagem h3,
+.SlideDiagnosticoImagem p {
+    background: url(/Repositorio/Templates/Geral/img/bck.ciano-a85.png)
+}
+.SlideDiagnosticoImagem a.Button {
+    color: #fff
+}
+.SlideDiagnosticoImagem .SlideIcon {
+    background-position: 0 0
+}
+.Vacinas a,
+.Vacinas a:hover,
+.Vacinas a:focus {
+    color: #a25dbf
+}
+.Vacinas .ToMenuSecao {
+    background-color: #a25dbf;
+    border-bottom: 2px solid #984bb8
+}
+.Vacinas .ToMenuSecao li {
+    padding: 0
+}
+.Vacinas .ToMenuSecao li:hover {
+    background-color: #b782cd
+}
+.Vacinas .ToMenuSecao li.Ativo {
+    background-color: #984bb8
+}
+.Vacinas .ToMenuSecao li a:before {
+    background-color: #b782cd
+}
+.Vacinas .Setas .Seta {
+    border: 1px solid #a25dbf
+}
+.Vacinas .Setas .Seta:hover {
+    background-color: #a25dbf
+}
+.Vacinas .Setas .Inativa {
+    cursor: default
+}
+.Vacinas .Setas .Inativa:hover {
+    background: none !important
+}
+.Vacinas .Setas .Seta.Prev:before {
+    background-position: 0 -144px
+}
+.Vacinas .Setas .Seta.Prev:hover:before {
+    background-position: 0 -80px
+}
+.Vacinas .Setas .Seta.Next:before {
+    background-position: 0 -128px
+}
+.Vacinas .Setas .Seta.Next:hover:before {
+    background-position: 0 -64px
+}
+.Vacinas .Setas .Ultima:after {
+    background-position: 0 -128px
+}
+.Vacinas .Setas .Ultima:hover:after {
+    background-position: 0 -64px
+}
+.Vacinas .Setas .Primeira:after {
+    background-position: 0 -144px
+}
+.Vacinas .Setas .Primeira:hover:after {
+    background-position: 0 -80px
+}
+.Vacinas .MenuContexto a {
+    background-color: #fff;
+    color: #a25dbf
+}
+.Vacinas .MenuContexto a:before {
+    background-position: 0 -128px
+}
+.Vacinas .MenuContexto a.Ativo,
+.Vacinas .MenuContexto a:hover {
+    background-color: #a25dbf;
+    color: #fff
+}
+.Vacinas .MenuContexto a.Ativo:before,
+.Vacinas .MenuContexto a:hover:before {
+    background-position: 0 -64px
+}
+.Vacinas .BoxInscreverNovidades .BoxHead {
+    background-color: #a25dbf;
+    color: #fff
+}
+.Vacinas .BoxInscreverNovidades .BoxHead p {
+    color: #fff
+}
+.Vacinas .BoxInscreverNovidades .BtnEmail {
+    background-color: #a25dbf;
+    border: 1px solid #a25dbf
+}
+.Vacinas .BoxInscreverNovidades .BtnEmail:hover {
+    background-color: #b782cd
+}
+.Vacinas .BoxLaboratorios {
+    background-color: #fff
+}
+.Vacinas .BoxLaboratorios h3,
+.Vacinas .BoxLaboratorios a {
+    color: #a25dbf
+}
+.Vacinas .BoxUnidades .Layer {
+    background: url(/Repositorio/Templates/Geral/img/bck.roxo-a85.png)
+}
+.Vacinas .BoxAgendamentos {
+    background-color: #a25dbf
+}
+.Vacinas .BoxResultados .BoxHead {
+    background-color: #a25dbf
+}
+.Vacinas .Alfabeto a {
+    background: #fff;
+    color: #a25dbf
+}
+.Vacinas .Alfabeto a:hover {
+    background-color: #a25dbf;
+    color: #fff
+}
+.Vacinas .ListaPlanos {
+    background: #fff
+}
+.Vacinas .FormHead {
+    background: #a25dbf;
+    border-bottom: 5px solid #9246b2
+}
+.Vacinas .EsqueciSenha {
+    color: #a25dbf
+}
+.Vacinas .BoxTabelaConversao a {
+    background-color: #a25dbf;
+    border: 1px solid #a25dbf
+}
+.Vacinas .BoxTabelaConversao a:hover {
+    background-color: #b782cd
+}
+.Vacinas .ItemTitulo {
+    background-color: #a25dbf;
+    border: 1px solid #a25dbf
+}
+.Vacinas .ItemTitulo:hover {
+    background-color: #b782cd
+}
+.Vacinas .TabelaConversoes tbody td {
+    border-top: 3px solid #a25dbf
+}
+.Vacinas .TabelaPalestra tbody td {
+    border-top: 1px solid #a25dbf
+}
+.Vacinas .TabelaSite {
+    background-color: #a25dbf;
+    border: 3px solid #a25dbf
+}
+.Vacinas .TabelaSite thead td {
+    background-color: #b782cd
+}
+.SlideVacinas h3,
+.SlideVacinas p {
+    background: url(/Repositorio/Templates/Geral/img/bck.roxo-a85.png)
+}
+.SlideVacinas a.Button {
+    color: #fff
+}
+.SlideVacinas .SlideIcon {
+    background-position: 0 -366px
+}
+.NucleosEspecializados a,
+.NucleosEspecializados a:hover,
+.NucleosEspecializados a:focus {
+    color: #e74c3c
+}
+.NucleosEspecializados .ToMenuSecao {
+    background-color: #e74c3c;
+    border-bottom: 2px solid #e43725
+}
+.NucleosEspecializados .ToMenuSecao li {
+    padding: 0
+}
+.NucleosEspecializados .ToMenuSecao li:hover {
+    background-color: #ed7669
+}
+.NucleosEspecializados .ToMenuSecao li.Ativo {
+    background-color: #e43725
+}
+.NucleosEspecializados .ToMenuSecao li a:before {
+    background-color: #ed7669
+}
+.NucleosEspecializados .Setas .Seta {
+    border: 1px solid #e74c3c
+}
+.NucleosEspecializados .Setas .Seta:hover {
+    background-color: #e74c3c
+}
+.NucleosEspecializados .Setas .Inativa {
+    cursor: default
+}
+.NucleosEspecializados .Setas .Inativa:hover {
+    background: none !important
+}
+.NucleosEspecializados .Setas .Seta.Prev:before {
+    background-position: 0 -208px
+}
+.NucleosEspecializados .Setas .Seta.Prev:hover:before {
+    background-position: 0 -80px
+}
+.NucleosEspecializados .Setas .Seta.Next:before {
+    background-position: 0 -192px
+}
+.NucleosEspecializados .Setas .Seta.Next:hover:before {
+    background-position: 0 -64px
+}
+.NucleosEspecializados .Setas .Ultima:after {
+    background-position: 0 -192px
+}
+.NucleosEspecializados .Setas .Ultima:hover:after {
+    background-position: 0 -64px
+}
+.NucleosEspecializados .Setas .Primeira:after {
+    background-position: 0 -208px
+}
+.NucleosEspecializados .Setas .Primeira:hover:after {
+    background-position: 0 -80px
+}
+.NucleosEspecializados .MenuContexto a {
+    background-color: #fff;
+    color: #e74c3c
+}
+.NucleosEspecializados .MenuContexto a:before {
+    background-position: 0 -192px
+}
+.NucleosEspecializados .MenuContexto a.Ativo,
+.NucleosEspecializados .MenuContexto a:hover {
+    background-color: #e74c3c;
+    color: #fff
+}
+.NucleosEspecializados .MenuContexto a.Ativo:before,
+.NucleosEspecializados .MenuContexto a:hover:before {
+    background-position: 0 -64px
+}
+.NucleosEspecializados .BoxInscreverNovidades .BoxHead {
+    background-color: #e74c3c;
+    color: #fff
+}
+.NucleosEspecializados .BoxInscreverNovidades .BoxHead p {
+    color: #fff
+}
+.NucleosEspecializados .BoxInscreverNovidades .BtnEmail {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c
+}
+.NucleosEspecializados .BoxInscreverNovidades .BtnEmail:hover {
+    background-color: #ed7669
+}
+.NucleosEspecializados .BoxLaboratorios {
+    background-color: #fff
+}
+.NucleosEspecializados .BoxLaboratorios h3,
+.NucleosEspecializados .BoxLaboratorios a {
+    color: #e74c3c
+}
+.NucleosEspecializados .BoxUnidades .Layer {
+    background: url(/Repositorio/Templates/Geral/img/bck.vermelho-a85.png)
+}
+.NucleosEspecializados .BoxAgendamentos {
+    background-color: #e74c3c
+}
+.NucleosEspecializados .BoxResultados .BoxHead {
+    background-color: #e74c3c
+}
+.NucleosEspecializados .Alfabeto a {
+    background: #fff;
+    color: #e74c3c
+}
+.NucleosEspecializados .Alfabeto a:hover {
+    background-color: #e74c3c;
+    color: #fff
+}
+.NucleosEspecializados .ListaPlanos {
+    background: #fff
+}
+.NucleosEspecializados .FormHead {
+    background: #e74c3c;
+    border-bottom: 5px solid #e32f1c
+}
+.NucleosEspecializados .EsqueciSenha {
+    color: #e74c3c
+}
+.NucleosEspecializados .BoxTabelaConversao a {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c
+}
+.NucleosEspecializados .BoxTabelaConversao a:hover {
+    background-color: #ed7669
+}
+.NucleosEspecializados .ItemTitulo {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c
+}
+.NucleosEspecializados .ItemTitulo:hover {
+    background-color: #ed7669
+}
+.NucleosEspecializados .TabelaConversoes tbody td {
+    border-top: 3px solid #e74c3c
+}
+.NucleosEspecializados .TabelaPalestra tbody td {
+    border-top: 1px solid #e74c3c
+}
+.NucleosEspecializados .TabelaSite {
+    background-color: #e74c3c;
+    border: 3px solid #e74c3c
+}
+.NucleosEspecializados .TabelaSite thead td {
+    background-color: #ed7669
+}
+.SlideNucleosEspecializados h3,
+.SlideNucleosEspecializados p {
+    background: url(/Repositorio/Templates/Geral/img/bck.vermelho-a85.png)
+}
+.SlideNucleosEspecializados a.Button {
+    color: #fff
+}
+.SlideNucleosEspecializados .SlideIcon {
+    background-position: 0 -146px
+}
+.ProfissionaisSaude {
+    padding-top: 42px
+}
+.ProfissionaisSaude a,
+.ProfissionaisSaude a:hover,
+.ProfissionaisSaude a:focus {
+    color: #005083
+}
+.ProfissionaisSaude .ToMenuSecao {
+    background-color: #2ecc71;
+    border-bottom: 2px solid #29b765;
+    border-top: 2px solid #29b765;
+    border-bottom: 0;
+    position: absolute;
+    top: 7px
+}
+.ProfissionaisSaude .ToMenuSecao li {
+    padding: 0
+}
+.ProfissionaisSaude .ToMenuSecao li:hover {
+    background-color: #54d98c
+}
+.ProfissionaisSaude .ToMenuSecao li.Ativo {
+    background-color: #29b765
+}
+.ProfissionaisSaude .ToMenuSecao li a:before {
+    background-color: #54d98c
+}
+.ProfissionaisSaude .Setas .Seta {
+    border: 1px solid #2ecc71
+}
+.ProfissionaisSaude .Setas .Seta:hover {
+    background-color: #2ecc71
+}
+.ProfissionaisSaude .Setas .Inativa {
+    cursor: default
+}
+.ProfissionaisSaude .Setas .Inativa:hover {
+    background: none !important
+}
+.ProfissionaisSaude .Setas .Seta.Prev:before {
+    background-position: 0 -176px
+}
+.ProfissionaisSaude .Setas .Seta.Prev:hover:before {
+    background-position: 0 -80px
+}
+.ProfissionaisSaude .Setas .Seta.Next:before {
+    background-position: 0 -160px
+}
+.ProfissionaisSaude .Setas .Seta.Next:hover:before {
+    background-position: 0 -64px
+}
+.ProfissionaisSaude .Setas .Ultima:after {
+    background-position: 0 -160px
+}
+.ProfissionaisSaude .Setas .Ultima:hover:after {
+    background-position: 0 -64px
+}
+.ProfissionaisSaude .Setas .Primeira:after {
+    background-position: 0 -176px
+}
+.ProfissionaisSaude .Setas .Primeira:hover:after {
+    background-position: 0 -80px
+}
+.ProfissionaisSaude .MenuContexto a {
+    background-color: #fff;
+    color: #2ecc71
+}
+.ProfissionaisSaude .MenuContexto a:before {
+    background-position: 0 -160px
+}
+.ProfissionaisSaude .MenuContexto a.Ativo,
+.ProfissionaisSaude .MenuContexto a:hover {
+    background-color: #2ecc71;
+    color: #fff
+}
+.ProfissionaisSaude .MenuContexto a.Ativo:before,
+.ProfissionaisSaude .MenuContexto a:hover:before {
+    background-position: 0 -64px
+}
+.ProfissionaisSaude .BoxInscreverNovidades .BoxHead {
+    background-color: #2ecc71;
+    color: #fff
+}
+.ProfissionaisSaude .BoxInscreverNovidades .BoxHead p {
+    color: #fff
+}
+.ProfissionaisSaude .BoxInscreverNovidades .BtnEmail {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71
+}
+.ProfissionaisSaude .BoxInscreverNovidades .BtnEmail:hover {
+    background-color: #54d98c
+}
+.ProfissionaisSaude .BoxLaboratorios {
+    background-color: #fff
+}
+.ProfissionaisSaude .BoxLaboratorios h3,
+.ProfissionaisSaude .BoxLaboratorios a {
+    color: #2ecc71
+}
+.ProfissionaisSaude .BoxUnidades .Layer {
+    background: url(/Repositorio/Templates/Geral/img/bck.verde-a85.png)
+}
+.ProfissionaisSaude .BoxAgendamentos {
+    background-color: #2ecc71
+}
+.ProfissionaisSaude .BoxResultados .BoxHead {
+    background-color: #2ecc71
+}
+.ProfissionaisSaude .Alfabeto a {
+    background: #fff;
+    color: #2ecc71
+}
+.ProfissionaisSaude .Alfabeto a:hover {
+    background-color: #2ecc71;
+    color: #fff
+}
+.ProfissionaisSaude .ListaPlanos {
+    background: #fff
+}
+.ProfissionaisSaude .FormHead {
+    background: #2ecc71;
+    border-bottom: 5px solid #27af61
+}
+.ProfissionaisSaude .EsqueciSenha {
+    color: #2ecc71
+}
+.ProfissionaisSaude .BoxTabelaConversao a {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71
+}
+.ProfissionaisSaude .BoxTabelaConversao a:hover {
+    background-color: #54d98c
+}
+.ProfissionaisSaude .ItemTitulo {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71
+}
+.ProfissionaisSaude .ItemTitulo:hover {
+    background-color: #54d98c
+}
+.ProfissionaisSaude .TabelaConversoes tbody td {
+    border-top: 3px solid #2ecc71
+}
+.ProfissionaisSaude .TabelaPalestra tbody td {
+    border-top: 1px solid #2ecc71
+}
+.ProfissionaisSaude .TabelaSite {
+    background-color: #2ecc71;
+    border: 3px solid #2ecc71
+}
+.ProfissionaisSaude .TabelaSite thead td {
+    background-color: #54d98c
+}
+.SlideProfissionaisSaude h3,
+.SlideProfissionaisSaude p {
+    background: url(/Repositorio/Templates/Geral/img/bck.verde-a85.png)
+}
+.SlideProfissionaisSaude a.Button {
+    color: #fff
+}
+.SlideProfissionaisSaude .SlideIcon {
+    background-position: 0 -256px
+}
+.BtnAzulEscuro,
+.BtnTema,
+.SlideInstitucional a.Button {
+    background-color: #005083;
+    border-bottom-color: #053d61
+}
+.BtnAzulEscuro:hover,
+.BtnTema:hover,
+.SlideInstitucional a.Button:hover {
+    background-color: #00609d
+}
+.BtnAzulClaro,
+.AnalisesClinicas .BtnTema,
+.SlideAnalisesClinicas a.Button {
+    background-color: #3498db;
+    border-bottom-color: #2c89c8
+}
+.BtnAzulClaro:hover,
+.AnalisesClinicas .BtnTema:hover,
+.SlideAnalisesClinicas a.Button:hover {
+    background-color: #4aa3df
+}
+.BtnVermelho,
+.NucleosEspecializados .BtnTema,
+.SlideNucleosEspecializados a.Button {
+    background-color: #e54930;
+    border-bottom-color: #d4472e
+}
+.BtnVermelho:hover,
+.NucleosEspecializados .BtnTema:hover,
+.SlideNucleosEspecializados a.Button:hover {
+    background-color: #e85d47
+}
+.BtnCiano,
+.DiagnosticoImagem .BtnTema,
+.SlideDiagnosticoImagem a.Button {
+    background-color: #6bcbca;
+    border-bottom-color: #58c4c3
+}
+.BtnCiano:hover,
+.DiagnosticoImagem .BtnTema:hover,
+.SlideDiagnosticoImagem a.Button:hover {
+    background-color: #7ed2d1
+}
+.BtnRoxo,
+.Vacinas .BtnTema,
+.SlideVacinas a.Button {
+    background-color: #a25dbf;
+    border-bottom-color: #8d50a6
+}
+.BtnRoxo:hover,
+.Vacinas .BtnTema:hover,
+.SlideVacinas a.Button:hover {
+    background-color: #ac6fc6
+}
+.BtnVerde,
+.ProfissionaisSaude .BtnTema,
+.SlideProfissionaisSaude a.Button {
+    background-color: #2dcc70;
+    border-bottom-color: #27ae61
+}
+.BtnVerde:hover,
+.ProfissionaisSaude .BtnTema:hover,
+.SlideProfissionaisSaude a.Button:hover {
+    background-color: #3ed47d
+}
+.BODYGERENCIADOR {
+    padding-top: 0
+}
+.BODYGERENCIADOR [id*="ctrl"],
+.BODYGERENCIADOR .Container,
+.BODYGERENCIADOR .ContainerFull {
+    overflow: visible
+}
+.BODYGERENCIADOR .AreaSuporte [id*="ctrl"],
+.BODYGERENCIADOR .ConteudoRelacionado [id*="ctrl"] {
+    clear: both
+}
+.BODYGERENCIADOR .ToMenuSecao {
+    border-top: 0;
+    border-bottom: 0;
+    position: static
+}
+.BODYGERENCIADOR .MenuInstitucional {
+    clear: both
+}
+.BODYGERENCIADOR .MenuSitemap {
+    max-width: 740px
+}
+.BODYGERENCIADOR .ContatosRodape {
+    float: left;
+    min-height: 156px;
+    max-width: 700px
+}
+.BODYGERENCIADOR .ToLogo {
+    float: left;
+    max-width: 255px
+}
+body {
+    background-color: #ecf0f1;
+    display: inline-block;
+    font-family: "Source Sans Pro", "Trebuchet MS", "Arial", sans-serif;
+    width: 100%
+}
+ul {
+    padding: 0;
+    margin: 0
+}
+header {
+    clear: both;
+    float: left;
+    width: 100%
+}
+h1,
+h2,
+h3 {
+    text-transform: uppercase
+}
+h1 {
+    font-size: 32px
+}
+h2 {
+    font-size: 19px
+}
+h3 {
+    font-size: 14px
+}
+h4 {
+    margin: .7em 0
+}
+p {
+    color: #717171;
+    font-size: 14px
+}
+section ul {
+    color: #717171;
+    font-size: 14px;
+    padding-left: 20px
+}
+section li {
+    margin-bottom: 5px;
+    margin-top: 5px
+}
+.TabelaSite {
+    border-spacing: 1px;
+    border-collapse: separate;
+    color: #717171;
+    font-size: 14.5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.TabelaSite td {
+    background-color: #fff;
+    padding: 3px 0
+}
+.TabelaSite thead {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold
+}
+.TabelaSite thead td {
+    padding: 5px 0;
+    text-align: center
+}
+h2.titulo-slide {
+    background: #2ECC71 url(/Repositorio/Templates/Geral/img/seta-calculadora.png) 435px 12px no-repeat;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 10px;
+    padding: 10px
+}
+h2.titulo-slide.item-aberto {
+    background-position: 435px -26px
+}
+.calculadora-exames {
+    font-size: 14px
+}
+.calculadora-exames label {
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0 0 3px
+}
+.calculadora-exames input,
+.calculadora-exames select,
+.calculadora-exames .unidade-medida {
+    background: #fff;
+    border: solid 1px #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0 0 10px;
+    padding: 5px
+}
+.calculadora-exames input {
+    height: 22px;
+    text-align: right;
+    width: 250px
+}
+.calculadora-exames input::-ms-clear {
+    display: none
+}
+.calculadora-exames input#album {
+    background: #F1F1F1
+}
+.calculadora-exames input.botao {
+    background: #2ECC71;
+    border: none;
+    color: #fff;
+    height: 35px;
+    text-align: center;
+    width: 150px
+}
+.calculadora-exames input.obrigatorio {
+    border-color: #CE003B
+}
+.calculadora-exames input.botao:active {
+    background: #54D98C
+}
+.calculadora-exames select {
+    height: 35px;
+    width: 80px
+}
+.calculadora-exames .unidade-medida {
+    background: #f1f1f1;
+    display: inline-block;
+    height: 22px;
+    width: 65px
+}
+.conteudo-slide {
+    display: none
+}
+.conteudo-slide div {
+    padding: 0 20px
+}
+.resultado-conta {
+    border-top: dashed 1px #ccc;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 15px 20px
+}
+.resultado-conta span {
+    background: #F2F2F2;
+    border: 1px solid #ccc;
+    color: #666;
+    display: block;
+    font-size: 32px;
+    font-weight: 300;
+    height: 42px;
+    margin: 3px 0 5px;
+    padding: 13px 10px 10px;
+    text-transform: none
+}
+.TabelaConversaoCont {
+    margin-bottom: 50px
+}
+.TabelaConversaoCont td {
+    text-align: center
+}
+.TabelaConversoes {
+    border-spacing: 0 !important;
+    border-collapse: separate
+}
+.TabelaConversoes tbody td {
+    padding: 10px 5px;
+    text-align: left
+}
+.TabelaConversoes tbody tr:first-of-type td {
+    border: 0
+}
+.TabelaConversoes input {
+    margin: 3px 0;
+    width: 120px
+}
+.TabelaPalestra {
+    border-spacing: 0 !important;
+    border-collapse: separate
+}
+.TabelaPalestra tbody tr:first-of-type td {
+    border: 0
+}
+.BotoesContainer {
+    text-align: center !important
+}
+.BotoesContainer div {
+    display: inline-block;
+    overflow: hidden
+}
+.BotoesContainer .Button:first-of-type {
+    margin-right: 10px
+}
+.BoxUnidades select {
+    color: #777777;
+    display: block;
+    font-size: 13px;
+    font-style: italic;
+    margin: 10px auto 0 auto;
+    padding: 5px;
+    width: 188px
+}
+.SimpleLink {
+    color: initial;
+    text-decoration: none
+}
+.SimpleLink:hover {
+    text-decoration: underline
+}
+.TipoUnidade label {
+    color: #717171;
+    float: left;
+    font-size: 14px;
+    font-style: italic
+}
+.TipoUnidade * {
+    margin-right: 10px
+}
+.TipoUnidade input[type="radio"] {
+    margin-right: 0
+}
+.TipoUnidade .BtnTodos {
+    font-size: 14px;
+    padding: 0;
+    background: 0;
+    border: 0;
+    color: #000;
+    float: left;
+    font-style: italic
+}
+.TipoUnidade .BtnTodos:hover {
+    text-decoration: underline
+}
+input[type="checkbox"],
+input[type="radio"] {
+    float: left;
+    margin: 3px
+}
+:focus {
+    outline: none
+}
+.LogoSite {
+    background: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/bck.logo-digimagem.png') no-repeat;
+    float: left;
+    height: 110px;
+    text-indent: -9999px;
+    width: 230px
+}
+header .LogoSite {
+    margin: 27px 16px 20px 0
+}
+.Container {
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 985px
+}
+.ContainerFull {
+    clear: both;
+    float: left;
+    width: 100%
+}
+.Busca {
+    float: left;
+    position: relative;
+    width: 177px
+}
+.Busca .BuscaTopo {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #e3e3e3;
+    font-size: 14px;
+    float: left;
+    margin-left: 7px;
+    margin-top: 7px;
+    padding: 9px 36px 10px 0;
+    width: 121px
+}
+.Busca .BuscaTopo:focus {
+    outline: none
+}
+.Busca .BtnPesquisar {
+    border: 0;
+    display: inline-block;
+    height: 36px;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 8px;
+    width: 36px;
+    background-position: 0 -216px
+}
+.Breadcrumb {
+    color: #717171;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 21px;
+    text-transform: uppercase;
+    width: 100%
+}
+.Breadcrumb a {
+    color: #717171;
+    margin: 0 8px;
+    text-decoration: none
+}
+.Breadcrumb a:link:hover {
+    text-decoration: underline
+}
+.Breadcrumb a:first-child {
+    margin-left: 0
+}
+.Breadcrumb p {
+    margin: 0
+}
+.Acessibilidade {
+    height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 0
+}
+.AreaSuporte,
+.ConteudoRelacionado {
+    float: left;
+    width: 235px
+}
+section {
+    float: left;
+    margin: 0 20px;
+    width: 475px
+}
+section p {
+    margin: 0
+}
+section.CapaContents {
+    margin: 0;
+    width: 100%
+}
+.FixOv {
+    overflow: visible
+}
+.CapaContents .Suporte {
+    float: left;
+    width: 314px
+}
+.CapaContents .Sumarios {
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+    width: 213px
+}
+.CapaContents .EmailContainer {
+    overflow: hidden;
+    padding: 30px 0;
+    width: 279px
+}
+.CapaContents .TxtNewsEmail {
+    width: 179px
+}
+.CapaContents .BoxSlide {
+    max-height: 305px;
+    overflow: hidden
+}
+.CapaContents .BoxLaboratorios {
+    max-height: 185px
+}
+.CapaContents .FormResultados {
+    box-shadow: none;
+    position: absolute;
+    top: -420px;
+    width: 314px;
+    z-index: 101
+}
+.PosicionarElemento {
+    position: relative;
+    height: 0;
+    width: 0
+}
+.ToSlider {
+    height: 407px;
+    margin-bottom: 30px
+}
+.Slider {
+    height: 100%;
+    overflow: hidden;
+    width: 100%
+}
+.Slider * {
+    color: #fff
+}
+.Slider .Container {
+    position: relative
+}
+.Slider h3 {
+    display: inline-block;
+    font-size: 43px;
+    margin: 110px 0 10px;
+    padding: 0 10px
+}
+.Slider p {
+    display: inline;
+    font-size: 20px;
+    line-height: 1.2
+}
+.Slider a.Button {
+    display: inline-block;
+    float: none;
+    font-size: 16px;
+    margin-top: 25px;
+    padding: 7px 15px
+}
+.Slider a.Button:hover {
+    cursor: pointer
+}
+.Slider .SlideIcon {
+    display: block;
+    height: 110px;
+    position: absolute;
+    right: 0;
+    width: 110px
+}
+.Slide {
+    background-position: center;
+    height: 100%;
+    width: 100%
+}
+.SlideNoInfo:hover {
+    cursor: pointer
+}
+.SlideInfo {
+    float: right;
+    text-align: center;
+    width: 624px
+}
+.ToSlideNav {
+    position: relative;
+    overflow: visible
+}
+.SlideNav {
+    bottom: 20px;
+    position: absolute;
+    right: 0;
+    z-index: 101
+}
+.SlideNav ul {
+    list-style: none
+}
+.SlideNav li {
+    float: left
+}
+.SlideNav li a {
+    color: #818181;
+    display: block;
+    font-size: 13px;
+    height: 0;
+    padding: 15px;
+    text-decoration: none;
+    text-indent: -1px;
+    line-height: .5;
+    width: 0px;
+    background-position: 0 -72px
+}
+.SlideNav li.cycle-pager-active a {
+    background-position: 0 -36px
+}
+.SobreDigimagem {
+    background-color: #fff;
+    color: #717171;
+    float: left;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 292px- 36px;
+    padding: 18px;
+    width: 212px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px
+}
+.SobreDigimagem h2 {
+    color: #00558f;
+    text-align: center
+}
+.ToFooter {
+    background: url(/Repositorio/Templates/Geral/img/bck.footer.jpg) no-repeat center center;
+    height: auto;
+    margin-top: 34px
+}
+.ToFooter .Container {
+    height: 100%
+}
+footer {
+    height: 100%
+}
+footer .LogoSite {
+    margin: 27px 75px 0 30px
+}
+footer .ContatosRodape {
+    height: 100%
+}
+footer .ContatoRodape {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px
+}
+footer .IconeTelefone,
+footer .IconeWhatsapp {
+    display: block
+}
+footer .IconeTelefone .TextoLink,
+footer .IconeWhatsapp .TextoLink {
+    color: #e5482e;
+    font-size: 26px;
+    padding: 0px 5px
+}
+footer .IconeTelefone:hover .TextoLink,
+footer .IconeWhatsapp:hover .TextoLink {
+    text-decoration: none
+}
+footer .IconeWhatsapp:before {
+    margin-top: 6px;
+    margin-left: 5px
+}
+footer h3 {
+    color: #024f86;
+    text-align: center
+}
+footer .HoraAtende {
+    color: #777777;
+    font-size: 11px;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase
+}
+footer .HoraAtende .Obs {
+    font-size: 9px
+}
+.BoxLateral {
+    float: left;
+    margin-bottom: 18px;
+    overflow: hidden;
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.BoxLateral h3 {
+    clear: both;
+    display: inline-block;
+    font-size: 19px
+}
+.BoxLateral img {
+    width: 100%;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0
+}
+.BoxLateral a.Button {
+    margin-left: 5%;
+    margin-bottom: 10px
+}
+.BoxSlider {
+    background-color: #fff;
+    overflow: hidden;
+    position: relative
+}
+.BoxSlider h3 {
+    left: 5px;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    white-space: nowrap;
+    z-index: 200
+}
+.BoxSlider h3 a {
+    background-color: #fff;
+    padding: 5px;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.BoxSlider .Setas {
+    margin: 5px 8px 0 0;
+    width: 50px
+}
+.BoxSlides {
+    width: 100%
+}
+.BoxSlide {
+    float: left;
+    min-height: 305px;
+    width: 100%
+}
+.BoxSlide h4 {
+    font-size: 14px;
+    margin: 12px 0 12px 5px
+}
+.BoxSlide h4,
+.BoxSlide p {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%
+}
+.BoxInscreverNovidades .BoxHead {
+    background-color: #dae2e4;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0
+}
+.BoxInscreverNovidades h3 {
+    display: block;
+    margin: 0;
+    padding: 13px 0;
+    text-align: center
+}
+.BoxInscreverNovidades p {
+    font-size: 14px;
+    text-align: center;
+    width: 190px;
+    margin: 0 auto;
+    padding: 0 0 13px 0
+}
+.BoxLaboratorios p {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    width: 90%
+}
+.TituloContraste {
+    line-height: 0.95;
+    text-align: center;
+    width: 100%
+}
+.TituloContraste .Forte {
+    font-size: 19px
+}
+.TituloContraste .Leve {
+    font-size: 21px;
+    font-weight: lighter
+}
+aside .BoxUnidades {
+    float: left
+}
+.BoxUnidades {
+    background: url(/Repositorio/Templates/Geral/img/bck.unidades.jpg) no-repeat center center;
+    float: none
+}
+.BoxUnidades h3,
+.BoxUnidades p {
+    color: #fff;
+    text-align: center;
+    width: 100%
+}
+.BoxUnidades h3 {
+    margin: 0 0 8px 0
+}
+.BoxUnidades p {
+    margin: 0
+}
+.BoxUnidades .Layer {
+    padding: 10px 0
+}
+.BoxAgendamentos {
+    background-image: url('https://sp.hermespardini.com.br/Repositorio/Templates/Geral/img/bck.agendamentos.png');
+    background-repeat: no-repeat;
+    background-position: left center
+}
+.BoxAgendamentos h3,
+.BoxAgendamentos p {
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%
+}
+.BoxAgendamentos h3 {
+    border-bottom: 1px solid #fff;
+    font-size: 19px;
+    padding: 0 0 8px 0
+}
+.BoxAgendamentos p {
+    padding: 20px 0 10px 0
+}
+.BoxAgendamentos a {
+    color: #fff
+}
+.BoxAgendamentos .Layer {
+    padding: 10px 0
+}
+.BoxResultados {
+    overflow: visible;
+    position: relative
+}
+.BoxResultados .BoxHead {
+    color: #fff;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0
+}
+.BoxResultados .BoxBody {
+    margin: 0 auto;
+    width: 90%
+}
+.BoxResultados p {
+    margin: 6px 0
+}
+.BoxResultados a.Button {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 7px 0;
+    text-align: center;
+    width: 100%
+}
+.Unidades {
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%
+}
+.Unidade {
+    border-top: 1px solid #c8d3d6;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    width: 100%
+}
+.Unidade:first-child {
+    border-top: none
+}
+.Unidade h3 {
+    clear: left;
+    float: left;
+    font-size: 15px;
+    margin: 3px 0 20px 3px
+}
+.Unidade a.BtnSaibaMais {
+    float: right;
+    margin-top: 10px
+}
+.Comodidades {
+    float: right;
+    list-style: none;
+    padding: 0
+}
+.InfoUnidade {
+    clear: both;
+    color: #717171;
+    float: left;
+    font-size: 14px
+}
+.Comodidade {
+    background-color: #dae2e4 !important;
+    float: left;
+    height: 25px;
+    margin: 0;
+    margin-left: 2px;
+    position: relative;
+    width: 25px;
+    z-index: 100
+}
+.Comodidade .Hint {
+    background-color: #dae2e4;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    left: -9999px;
+    padding: 8px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 40px;
+    white-space: nowrap;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.Comodidade:hover {
+    cursor: pointer
+}
+.Comodidade:hover .Hint {
+    left: -10px;
+    z-index: 120
+}
+.InfoUnidade span {
+    clear: both;
+    float: left;
+    line-height: 1.8
+}
+.IconeLocal:before {
+    content: " ";
+    display: block;
+    float: left;
+    height: 25px;
+    width: 25px;
+    background-position: 0 -75px
+}
+.IconeTelMenor:before {
+    content: " ";
+    display: block;
+    float: left;
+    height: 25px;
+    width: 25px;
+    background-position: 0 -125px
+}
+.Comodidades .Estacionamento {
+    background-position: 0 -50px
+}
+.Comodidades .Wifi,
+.Comodidades .WiFi {
+    background-position: 0 -186px
+}
+.Comodidades .Vacinas {
+    background-position: 0 -100px
+}
+.Comodidades .Acessivel,
+.Comodidades .AcessibilidadeCompleta {
+    background-position: 0 -25px
+}
+.Comodidades .Bicicletario {
+    background-position: 0 0
+}
+.Unidade.Interna {
+    padding: 0;
+    position: relative
+}
+.Unidade.Interna .InfoUnidade {
+    clear: none
+}
+.Unidade.Interna .IconeLocal {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 115%;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    text-transform: uppercase
+}
+.Unidade.Interna .IconeLocal:first-line {
+    margin-left: 0
+}
+.Unidade.Interna .IconeLocal:before {
+    margin-left: -25px;
+    margin-top: -1px
+}
+.ResetaAbsolute {
+    position: relative
+}
+.Comodidades.Interna {
+    background: #fff;
+    padding: 6px;
+    position: absolute;
+    right: 16px;
+    top: -59px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.29804) 0px 1px 4px -1px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.29804) 0px 1px 4px -1px;
+    box-shadow: rgba(0, 0, 0, 0.29804) 0px 1px 4px -1px
+}
+.Comodidades.Interna .Comodidade {
+    background-color: transparent !important
+}
+.Comodidades.Interna .Comodidade .Hint {
+    background-color: #fff
+}
+.GmapsUnidade {
+    height: 300px;
+    margin-left: -3%;
+    width: 105%
+}
+.LinhaSepara {
+    background-color: #fff;
+    float: left;
+    height: 1px;
+    margin: 15px 0;
+    width: 100%
+}
+.BlocoCampo {
+    float: left;
+    width: 100%
+}
+.BlocoCampo input[type="text"],
+.BlocoCampo input[type="password"],
+.BlocoCampo input[type="email"],
+.BlocoCampo input[type="search"],
+.BlocoCampo select,
+.BlocoCampo textarea {
+    background-color: #f7f6f6;
+    border: 1px solid #d8d8d8;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.BlocoCampo select {
+    padding: 8px 0;
+    width: 100%
+}
+.BlocoCampo input[type="text"],
+.BlocoCampo input[type="password"],
+.BlocoCampo input[type="email"],
+.BlocoCampo input[type="search"],
+.BlocoCampo textarea {
+    padding: 8px 2.5%;
+    width: 95%
+}
+.BlocoCampo label {
+    color: #717171;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+    width: 100%
+}
+.BlocoCampo .Button {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding: 7px 50px
+}
+.MetadeBloco {
+    float: left;
+    width: 46.5%
+}
+.MetadeBloco:first-of-type {
+    margin-right: 7%
+}
+.CheckContainer {
+    float: left;
+    margin-right: 10px
+}
+.CheckContainer label {
+    width: auto
+}
+.CheckContainer input[type="checkbox"],
+.CheckContainer input[type="radio"] {
+    margin: 8px;
+    padding: 0;
+    width: auto
+}
+.CampoFlexBoxContainer {
+    width: 102%;
+    display: block;
+    margin: 0 -3px
+}
+.CampoFlexBox {
+    display: inline-flex;
+    clear: both;
+    flex-direction: row;
+    padding: 3px 1px;
+    margin: 3px;
+    background: #f7f6f6;
+    border: 1px solid #d8d8d8;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.CampoFlexBox label {
+    padding: 1px 5px 2px 0;
+    width: auto
+}
+.Planos {
+    margin-top: 20px
+}
+.Alfabeto {
+    margin: 3px 0;
+    text-align: center
+}
+.Alfabeto a {
+    display: inline-block;
+    font-size: 24px;
+    padding: 0 9px;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.ListaPlanos {
+    font-size: 14px;
+    list-style: none;
+    margin-top: 20px;
+    padding: 20px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.ListaPlanos li {
+    border-top: 1px solid #ecf0f1;
+    padding: 7px 0 7px 10px
+}
+.ListaPlanos li:first-child {
+    border-top: none
+}
+.EsqueciSenha {
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase
+}
+.EsqueciSenha:hover {
+    text-decoration: underline
+}
+.tab-content {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    margin-bottom: 15px;
+    padding: 15px;
+    padding-bottom: 0
+}
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    outline: none
+}
+.BtnFechar {
+    color: #fff;
+    float: left;
+    font-size: 23px;
+    height: 1px;
+    line-height: 10px;
+    position: absolute;
+    right: 43px;
+    text-decoration: none;
+    text-indent: -9999px;
+    top: 5px;
+    width: 1px
+}
+.BtnFechar:after {
+    content: "\00D7";
+    display: block;
+    float: left;
+    padding: 13px;
+    text-indent: 0;
+    height: 13px;
+    width: 13px
+}
+.FormHead {
+    clear: both;
+    color: #fff;
+    float: left;
+    position: relative;
+    width: 100%
+}
+.FormHead h3 {
+    display: block;
+    font-size: 19px;
+    margin: 0;
+    padding: 13px 0;
+    text-align: center
+}
+.FormHead p {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    width: 190px;
+    margin: 0 auto;
+    padding: 0 0 13px 0
+}
+.FormBody {
+    clear: both;
+    float: left;
+    margin: 5px 0 15px 0
+}
+.FormFooter {
+    clear: both;
+    margin: 10px auto;
+    overflow: hidden;
+    width: 90%
+}
+.FormFooter .ButtonAjuda {
+    float: right
+}
+.FormFooter .EsqueciSenha {
+    float: left;
+    padding-top: 10px
+}
+.Conteudo1 *:first-child {
+    margin-top: 0
+}
+.BoxTabelaConversao a {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 2.5;
+    padding: 5px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 99%
+}
+.BoxTabelaConversao a:before {
+    content: " ";
+    float: left;
+    height: 36px;
+    margin: 0 3%;
+    width: 36px;
+    background-position: 0 -396px
+}
+.BoxTabelaConversao a:first-line {
+    font-size: 13px;
+    font-weight: normal
+}
+.Setas.Paginacao {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 420px
+}
+.Setas.Paginacao:before {
+    float: left;
+    height: 15px
+}
+.Setas.Paginacao:after {
+    float: right;
+    height: 20px
+}
+.Setas.Paginacao * {
+    float: left;
+    margin-right: 6px
+}
+.Setas.Paginacao .Inativa {
+    border: 1px solid #fff
+}
+.Setas.Paginacao .Inativa.Prev:before {
+    background-position: 0 -80px
+}
+.Setas.Paginacao .Inativa.Next:before {
+    background-position: 0 -64px
+}
+.Setas.Paginacao .Inativa.Primeira:after {
+    background-position: 0 -80px
+}
+.Setas.Paginacao .Inativa.Ultima:after {
+    background-position: 0 -64px
+}
+.Setas.Paginacao .Seta {
+    width: 23px
+}
+.Setas.Paginacao .Seta.Primeira,
+.Setas.Paginacao .Seta.Ultima {
+    width: 29px
+}
+.Setas.Paginacao .Seta.Primeira:before,
+.Setas.Paginacao .Seta.Ultima:before {
+    margin-right: -2px
+}
+.Setas.Paginacao input[type="text"] {
+    background-color: #f7f6f6;
+    border: 1px solid #d8d8d8;
+    font-size: 14px;
+    padding: 0.75% 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.Setas.Paginacao span {
+    margin-top: 2px
+}
+.BtnIr,
+.BoxArquivos li .Button {
+    padding: 0.5% 8px;
+    text-transform: none
+}
+.MostraEsconde h4 {
+    margin: 0
+}
+.MostraEsconde .Item {
+    overflow: hidden;
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    margin-top: 10px
+}
+.MostraEsconde .Item.Aberto .ItemTitulo:after {
+    background-position: 0 -48px
+}
+.MostraEsconde .Item.Aberto .ItemTitulo:after {
+    float: right;
+    width: 16px
+}
+.MostraEsconde .Item:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0
+}
+.ItemTitulo {
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    padding: 1.75% 2% 2%;
+    position: relative;
+    text-decoration: none;
+    width: 95.5%
+}
+.ItemTitulo:after {
+    background-position: 0 -32px
+}
+.ItemTitulo:after {
+    float: right;
+    width: 16px
+}
+.ItemCorpo {
+    background: #fff;
+    display: none;
+    margin: -3px auto 0 auto;
+    padding: 7px 8px 8px 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.ItemCorpo ul {
+    padding-left: 20px
+}
+.Listagem {
+    padding: 0;
+    list-style: none
+}
+.Listagem li {
+    border-top: 1px solid #fff;
+    float: left;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    width: 100%
+}
+.Listagem li:first-child {
+    border-top: none;
+    padding-top: 0
+}
+.Listagem img {
+    float: left;
+    margin-right: 10px;
+    overflow: hidden;
+    width: 30%
+}
+.Listagem h4 {
+    margin-top: 0
+}
+.Listagem a {
+    margin-top: 10px
+}
+.ListaBusca li {
+    word-wrap: break-word
+}
+.ListaBusca p {
+    margin-bottom: 10px
+}
+.ListagemBoxes {
+    padding: 0
+}
+.ListagemBoxes .Item {
+    border: none;
+    float: left;
+    margin: 0;
+    margin-right: 3%;
+    margin-top: 15px !important;
+    padding: 0;
+    width: 48%
+}
+.ListagemBoxes .Item:nth-child(even) {
+    margin-right: 0
+}
+.ListagemBoxes a {
+    text-decoration: none
+}
+.ListagemBoxes .ItemTitulo {
+    width: 95%
+}
+.ListagemBoxes .ItemTitulo:after {
+    display: none
+}
+.ListagemBoxes .ItemCorpo {
+    display: block;
+    min-height: 120px
+}
+.ListagemBoxes p:hover {
+    text-decoration: underline
+}
+.ListagemBoxes img {
+    float: left;
+    margin-right: 7px;
+    margin-top: 5px;
+    max-width: 65px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+.ImgEsquerda {
+    float: left;
+    margin-right: 10px
+}
+.ImgDireita {
+    float: right;
+    margin-left: 10px
+}
+.DropListaPaginas {
+    margin-top: 10px
+}
+.BoxArquivos {
+    height: 350px
+}
+.BoxArquivos h3 {
+    position: static;
+    margin: 10px
+}
+.BoxArquivos li {
+    border-bottom: 1px solid #E0E0E0;
+    margin: 10px;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 0;
+    width: auto
+}
+.BoxArquivos li .Button {
+    float: left;
+    margin: 5px 0 0 0
+}
+.BoxArquivos .Setas {
+    display: none
+}
+.BoxArquivos .SimpleLink {
+    float: right;
+    margin: 5px 20px 10px 0
+}
+.abre_ {
+    display: none
+}
+#containerCurriculo {
+    clear: both;
+    float: left;
+    margin: 15px 0;
+    width: 100%
+}
+.Clear {
+    clear: both
+}
+.FormPreAtendimento {
+    padding: 10px 15px
+}
+.FormPreAtendimento input {
+    background: #f1f1f1;
+    border: 1px #bbbbbb solid;
+    padding: 5px;
+    border-radius: 5px
+}
+.FormPreAtendimento span {
+    display: block;
+    font-size: 11px
+}
+.FormPreAtendimento .Arquivo {
+    font-size: 12px
+}
+.MarginBottom20 {
+    margin-bottom: 20px
+}
+.MarginTop20 {
+    margin-top: 20px
+}
+/*# sourceMappingURL=app.css.map */
